@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>SHOE VAULT | Haute Atelier Footwear Pakistan</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <style>
+    @layer base {
+      html, body { margin:0; padding:0; scroll-behavior: smooth; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #0e0e11; }
+    ::-webkit-scrollbar-thumb { background: #2c2b33; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--color-primary, #D4AF37); }
+
+    :root {
+      --color-primary: #D4AF37;
+      --color-primary-hover: #E5C358;
+      --color-primary-fixed: #F5E29D;
+      --color-primary-container: #C59F2D;
+      --color-on-primary: #181300;
+      --color-secondary: #E0C298;
+      --color-bg: #0F0F12;
+      --color-surface: #151518;
+      --color-surface-lowest: #09090C;
+      --color-surface-low: #18181C;
+      --color-surface-container: #1F1F24;
+      --color-surface-high: #292930;
+      --color-surface-highest: #35353E;
+    }
+
+    body.theme-gold {
+      --color-primary: #D4AF37;
+      --color-primary-hover: #E5C358;
+      --color-primary-fixed: #F5E29D;
+      --color-primary-container: #C59F2D;
+      --color-on-primary: #181300;
+      --color-secondary: #E0C298;
+      --color-bg: #0F0F12;
+      --color-surface: #151518;
+      --color-surface-lowest: #09090C;
+      --color-surface-low: #18181C;
+      --color-surface-container: #1F1F24;
+      --color-surface-high: #292930;
+    }
+
+    body.theme-emerald {
+      --color-primary: #10B981;
+      --color-primary-hover: #34D399;
+      --color-primary-fixed: #6EE7B7;
+      --color-primary-container: #059669;
+      --color-on-primary: #022C22;
+      --color-secondary: #D4AF37;
+      --color-bg: #08120F;
+      --color-surface: #0E1B16;
+      --color-surface-lowest: #050A08;
+      --color-surface-low: #12231D;
+      --color-surface-container: #172D25;
+      --color-surface-high: #203A30;
+    }
+
+    body.theme-burgundy {
+      --color-primary: #E11D48;
+      --color-primary-hover: #F43F5E;
+      --color-primary-fixed: #FDA4AF;
+      --color-primary-container: #9F1239;
+      --color-on-primary: #4C0519;
+      --color-secondary: #E2B170;
+      --color-bg: #140A0D;
+      --color-surface: #1B0E13;
+      --color-surface-lowest: #0B0507;
+      --color-surface-low: #221217;
+      --color-surface-container: #2A171D;
+      --color-surface-high: #381E26;
+    }
+
+    body.theme-cognac {
+      --color-primary: #D97706;
+      --color-primary-hover: #F59E0B;
+      --color-primary-fixed: #FCD34D;
+      --color-primary-container: #B45309;
+      --color-on-primary: #451A03;
+      --color-secondary: #E0C298;
+      --color-bg: #120D0A;
+      --color-surface: #18120D;
+      --color-surface-lowest: #090604;
+      --color-surface-low: #201711;
+      --color-surface-container: #281D15;
+      --color-surface-high: #35271C;
+    }
+
+    .theme-chip.active {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .nav-link-btn {
+      position: relative;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .nav-link-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--color-primary);
+      transition: width 0.25s ease;
+    }
+    .nav-link-btn:hover::after, .nav-link-btn.active::after {
+      width: 100%;
+    }
+    .nav-link-btn.active {
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "var(--color-primary, #D4AF37)",
+            "primary-hover": "var(--color-primary-hover, #E5C358)",
+            "primary-fixed": "var(--color-primary-fixed, #F5E29D)",
+            "primary-container": "var(--color-primary-container, #C59F2D)",
+            "on-primary": "var(--color-on-primary, #181300)",
+            "secondary": "var(--color-secondary, #E0C298)",
+            "background": "var(--color-bg, #0F0F12)",
+            "surface": "var(--color-surface, #151518)",
+            "surface-container-lowest": "var(--color-surface-lowest, #09090C)",
+            "surface-container-low": "var(--color-surface-low, #18181C)",
+            "surface-container": "var(--color-surface-container, #1F1F24)",
+            "surface-container-high": "var(--color-surface-high, #292930)",
+            "surface-container-highest": "var(--color-surface-highest, #35353E)",
+            "on-surface": "#EDE9E6",
+            "on-surface-variant": "#C8C2BA",
+            "outline": "#8E887E",
+            "outline-variant": "#4E473E",
+            "error": "#FF4D4D"
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          },
+          spacing: {
+            "space-xl": "4rem",
+            "gutter-sm": "1rem",
+            margin: "2rem",
+            "space-lg": "2.25rem",
+            gutter: "1.5rem",
+            "space-xs": "0.375rem",
+            "space-sm": "0.75rem",
+            "margin-mobile": "1.25rem",
+            "space-md": "1.25rem",
+            "margin-desktop": "4rem",
+            "gutter-lg": "2.5rem"
+          },
+          fontFamily: {
+            "headline-xl-mobile": ["Bodoni Moda"],
+            "headline-sm": ["Bodoni Moda"],
+            "display-hero": ["Bodoni Moda"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-xl": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Bodoni Moda"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-xl": ["Bodoni Moda"],
+            "headline-md": ["Bodoni Moda"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-lg": ["Bodoni Moda"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Bodoni Moda"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container relative theme-gold">
+
+  <!-- HEADER NAVIGATION WITH SCREENSHOT 3 TOP RIBBON & SCREENSHOT 1 NAVBAR -->
+  <header class="fixed top-0 inset-x-0 z-50 flex flex-col bg-surface-container-lowest shadow-2xl">
+    
+    <!-- 1. TOP RIBBON (FROM SCREENSHOT 3) -->
+    <aside class="w-full bg-[#0a0a0d] text-on-surface py-2 px-margin-mobile md:px-margin-desktop border-b border-surface-container-high/60 text-xs">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+        <!-- Customer Service Info -->
+        <div class="flex items-center gap-2 text-on-surface-variant font-mono">
+          <span class="text-outline">Email:</span>
+          <a href="mailto:customercare.pk@shoevault.com" onclick="openContactModal('customercare.pk@shoevault.com'); return false;" class="text-on-surface hover:text-primary transition-colors underline decoration-dotted cursor-pointer" title="Contact Shoe Vault Concierge">customercare.pk@shoevault.com</a>
+          <span class="mx-1 text-primary">|</span>
+          <span class="text-outline">Call:</span>
+          <a href="tel:04232761261" class="text-on-surface hover:text-primary transition-colors font-bold">042-32761261</a>
+        </div>
+
+        <!-- Delivery Notice -->
+        <div class="text-center font-medium text-primary flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm animate-pulse">local_shipping</span>
+          <span>Delivery charges of Rs.149 will be applicable on all orders</span>
+        </div>
+
+        <!-- Theme & Currency Selection -->
+        <div class="flex items-center gap-3">
+          <!-- Palette Picker -->
+          <div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-0.5 rounded border border-surface-container-high/70" title="Switch Theme Palette">
+            <span class="text-[10px] text-on-surface-variant font-label-sm hidden lg:inline mr-1">PALETTE:</span>
+            <button onclick="setTheme('theme-gold')" class="w-3.5 h-3.5 rounded-full bg-[#D4AF37] theme-chip active" id="chip-gold" title="Atelier Gold"></button>
+            <button onclick="setTheme('theme-emerald')" class="w-3.5 h-3.5 rounded-full bg-[#10B981] theme-chip" id="chip-emerald" title="Royal Emerald"></button>
+            <button onclick="setTheme('theme-burgundy')" class="w-3.5 h-3.5 rounded-full bg-[#E11D48] theme-chip" id="chip-burgundy" title="Imperial Burgundy"></button>
+            <button onclick="setTheme('theme-cognac')" class="w-3.5 h-3.5 rounded-full bg-[#D97706] theme-chip" id="chip-cognac" title="Bespoke Cognac"></button>
+          </div>
+
+          <!-- Currency Selector -->
+          <select id="currency-select" onchange="changeCurrency(this.value)" class="bg-surface-container-low border border-surface-container-high rounded px-1.5 py-0.5 text-[11px] text-on-surface focus:outline-none cursor-pointer">
+            <option value="PKR">PKR (Rs.)</option>
+            <option value="USD">USD ($)</option>
+            <option value="AED">AED (د.إ)</option>
+          </select>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 2. BRAND BAR WITH SHOE VAULT LOGO & ICONS -->
+    <div class="w-full bg-surface-container-lowest/90 backdrop-blur-2xl border-b border-surface-container-high/40">
+      <div class="h-16 max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between gap-space-md">
+        <!-- Logo -->
+        <div class="flex items-center gap-space-md">
+          <a class="flex items-center gap-3 group cursor-pointer" onclick="scrollToSection('top')" title="SHOE VAULT Home">
+            <img alt="SHOE VAULT - Step In Style" class="h-11 sm:h-12 w-auto object-contain rounded hover:brightness-110 transition-all" src="logo.png"/>
+            <div class="hidden sm:flex flex-col">
+              <span class="font-headline-sm text-base md:text-lg tracking-wider text-on-surface leading-none group-hover:text-primary transition-colors font-extrabold uppercase">SHOE VAULT</span>
+              <span class="font-label-sm text-[10px] tracking-[0.3em] text-primary leading-tight mt-1 font-semibold uppercase">HAUTE ATELIER • PAKISTAN</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Search Bar (Inline from Screenshot 1) -->
+        <div class="relative flex-1 max-w-md hidden md:block mx-6">
+          <input id="nav-search-input" oninput="handleSearch(this.value)" type="text" placeholder="Search shoes, sneakers, loafers, heels, boots..." class="w-full bg-surface-container-low border border-surface-container-high/80 rounded-full py-2 pl-4 pr-10 text-xs text-on-surface placeholder:text-outline focus:outline-none focus:border-primary transition-all shadow-inner"/>
+          <span class="material-symbols-outlined absolute right-3 top-2 text-on-surface-variant text-[18px] pointer-events-none">search</span>
+        </div>
+
+        <!-- Header Action Icons -->
+        <div class="flex items-center gap-space-sm sm:gap-space-md">
+          <!-- Wishlist -->
+          <button onclick="openWishlistDrawer()" aria-label="Wishlist" class="p-2 text-on-surface-variant hover:text-primary transition-colors relative flex items-center justify-center rounded-lg hover:bg-surface-container" type="button" title="View Wishlist">
+            <span class="material-symbols-outlined text-[20px]">favorite</span>
+            <span id="wishlist-count-badge" class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span>
+          </button>
+          
+          <!-- Shopping Cart -->
+          <button onclick="openCart()" aria-label="Shopping Cart" class="p-2 text-on-surface-variant hover:text-primary transition-colors relative flex items-center justify-center rounded-lg hover:bg-surface-container" type="button" title="Open Salon Cart">
+            <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+            <span id="cart-count-badge" class="absolute -top-1 -right-1 bg-primary text-on-primary font-label-sm text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+          </button>
+
+          <!-- Shoe Vault Club Sign-in Button -->
+          <button onclick="openClubModal()" class="flex items-center gap-1.5 py-1.5 px-3 bg-primary hover:bg-primary-hover text-on-primary rounded font-label-sm text-xs font-bold uppercase transition-all shadow cursor-pointer">
+            <span class="material-symbols-outlined text-[16px]">loyalty</span>
+            <span class="hidden sm:inline">Shoe Vault Club</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. NAVIGATION MENU ROW (EXACT LABELS FROM SCREENSHOT 1) -->
+    <nav class="w-full bg-surface-container-low border-b border-surface-container-high/60 overflow-x-auto py-2.5 px-margin-mobile md:px-margin-desktop shadow-inner">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 text-xs font-bold uppercase font-label-md tracking-wider">
+        <div class="flex items-center gap-5 sm:gap-7 overflow-x-auto no-scrollbar py-0.5">
+          <button onclick="filterCategory('new-arrivals', this)" class="nav-link-btn active text-on-surface hover:text-primary cursor-pointer">NEW ARRIVALS</button>
+          <button onclick="filterCategory('sneakers', this)" class="nav-link-btn text-on-surface hover:text-primary cursor-pointer">SNEAKER FEST</button>
+          <button onclick="filterCategory('men', this)" class="nav-link-btn text-on-surface hover:text-primary cursor-pointer">MEN</button>
+          <button onclick="filterCategory('women', this)" class="nav-link-btn text-on-surface hover:text-primary cursor-pointer">WOMEN</button>
+          <button onclick="filterCategory('kids', this)" class="nav-link-btn text-on-surface hover:text-primary cursor-pointer">KIDS</button>
+          <button onclick="filterCategory('bags', this)" class="nav-link-btn text-on-surface hover:text-primary cursor-pointer">BAGS</button>
+          <button onclick="filterCategory('accessories', this)" class="nav-link-btn text-on-surface hover:text-primary cursor-pointer">ACCESSORIES</button>
+          <button onclick="filterCategory('sale', this)" class="nav-link-btn text-error hover:text-error/80 cursor-pointer flex items-center gap-1">
+            <span class="material-symbols-outlined text-sm">local_fire_department</span>
+            <span>SUPER SALE</span>
+          </button>
+          <button onclick="openClubModal()" class="nav-link-btn text-primary hover:text-primary-hover cursor-pointer">SHOE VAULT CLUB</button>
+          <button onclick="openOrderTrackingModal()" class="nav-link-btn text-on-surface hover:text-primary cursor-pointer">TRACK ORDER</button>
+          <a href="contact.html" class="nav-link-btn text-on-surface hover:text-primary cursor-pointer flex items-center gap-1" title="Contact Us">
+            <span class="material-symbols-outlined text-sm">mail</span>
+            <span>CONTACT US</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN BODY -->
+  <main class="w-full pt-36 bg-background min-h-screen" id="top">
+    <div class="flex flex-col w-full text-on-surface">
+
+      <!-- HERO SECTION (ORIGINAL EDITORIAL DESIGN PRESERVED) -->
+      <section class="relative w-full -mt-36 min-h-[92vh] flex items-end pb-space-xl overflow-hidden bg-surface-container-lowest">
+        <!-- Hero Image Background with Cinematic Atmospheric Gradients -->
+        <div class="absolute inset-0 z-0">
+          <img id="hero-main-img" alt="SHOE VAULT Flagship Monaco Runner in Travertine Atelier" class="w-full h-full object-cover object-center scale-[1.02] transition-all duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUHk7UlCN7JFInJGz4y5Rar8hYMQERtIR8mdm2X6nCqy-nBPMWlrO5K0QxTr6kAiLvjQn2XS1IMYcTBXJ9mm3jmpkhInggf9w8KS_tGXf_ycGwb3LT3z1NljI51AgVlVOFiqJ9-8j62EMW7wKYK12AiZplSoB9x2dq9OeptqeWGutM524Nb--A4xDMqXU95A7JfQIP5BUvIHM3tl1roApOzEZZUmGBShNM3pvQy8-TENw1-_I1EphN"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-surface-container-lowest/20"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest/90 via-surface-container-lowest/30 to-transparent"></div>
+        </div>
+
+        <!-- Hero Content Overlay -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-40">
+          <div class="max-w-2xl space-y-space-md">
+            <!-- Micro Badges & Atelier Coordinate -->
+            <div class="flex items-center gap-space-sm flex-wrap">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-high/80 backdrop-blur-md rounded border border-surface-container-highest text-primary font-label-sm text-label-sm uppercase tracking-[0.22em]">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                <span id="hero-badge">Private Reserve 2025</span>
+              </span>
+              <span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-on-surface-variant/80">
+                Civitanova Marche, Italy
+              </span>
+            </div>
+
+            <!-- Dramatic Bodoni Typography -->
+            <div class="space-y-space-xs">
+              <h1 class="font-display-hero text-headline-xl md:text-display-hero text-on-surface tracking-tight leading-[0.95] uppercase">
+                Step Into <br/>
+                <span class="italic font-light text-primary" id="hero-subtitle">Your Style.</span>
+              </h1>
+              <p class="font-body-xl text-body-lg md:text-body-xl text-on-surface-variant max-w-xl font-light leading-relaxed" id="hero-desc">
+                Discover footwear engineered for unprecedented comfort, quiet authority, and timeless elegance. Hand-finished Italian calfskin married with sculptural, modern architectural silhouettes.
+              </p>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm pt-space-xs">
+              <button onclick="scrollToSection('bestsellers')" class="h-[52px] px-space-lg bg-primary hover:bg-primary-hover text-on-primary font-label-md text-label-md uppercase tracking-[0.2em] font-semibold rounded flex items-center justify-center gap-2 transition-all shadow-[0_12px_24px_-8px_rgba(212,175,55,0.4)] hover:-translate-y-0.5 cursor-pointer">
+                <span>Shop Collection</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+              <button onclick="scrollToSection('new-arrivals')" class="h-[52px] px-space-lg bg-surface-container-low/70 hover:bg-surface-container-high hover:text-primary backdrop-blur-md text-on-surface font-label-md text-label-md uppercase tracking-[0.2em] font-medium rounded border border-surface-container-high transition-all flex items-center justify-center cursor-pointer">
+                Explore New Arrivals
+              </button>
+            </div>
+
+            <!-- Micro Indicators & Status Pager (Interactive) -->
+            <div class="pt-space-md border-t border-surface-container-high/40 flex items-center justify-between text-on-surface-variant">
+              <div class="flex items-center gap-space-sm">
+                <span id="hero-counter" class="font-label-md text-label-sm text-primary tracking-widest font-bold">01 / 04</span>
+                <span class="h-3 w-px bg-surface-container-highest mx-2"></span>
+                <span id="hero-slide-title" class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">The Monaco Runner in Fine Travertine Nappa</span>
+              </div>
+              <div class="hidden sm:flex items-center gap-2">
+                <button onclick="switchHeroSlide(0)" class="h-2 rounded transition-all cursor-pointer w-8 bg-primary" id="hero-bar-0" title="Monaco Runner"></button>
+                <button onclick="switchHeroSlide(1)" class="h-2 rounded transition-all cursor-pointer w-4 bg-surface-container-high hover:bg-primary/50" id="hero-bar-1" title="Aurelia Slingback"></button>
+                <button onclick="switchHeroSlide(2)" class="h-2 rounded transition-all cursor-pointer w-4 bg-surface-container-high hover:bg-primary/50" id="hero-bar-2" title="Milano Oxford"></button>
+                <button onclick="switchHeroSlide(3)" class="h-2 rounded transition-all cursor-pointer w-4 bg-surface-container-high hover:bg-primary/50" id="hero-bar-3" title="Roma Boot"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LUXURY VALUE PROPOSITIONS BAR (ORIGINAL PRESERVED) -->
+      <section class="w-full bg-surface-container-low border-y border-surface-container-high/50 py-space-md">
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter">
+          <div onclick="openInfoModal('materials')" class="flex items-center gap-space-sm group cursor-pointer p-2 rounded hover:bg-surface-container transition-colors">
+            <div class="w-10 h-10 rounded bg-surface-container-high/60 flex items-center justify-center text-primary border border-surface-container-highest group-hover:border-primary/40 transition-colors">
+              <span class="material-symbols-outlined text-[22px]">verified</span>
+            </div>
+            <div>
+              <h4 class="font-label-md text-label-sm uppercase tracking-wider text-on-surface font-semibold group-hover:text-primary transition-colors">Tuscan Full-Grain</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Grade-A Italian Leathers</p>
+            </div>
+          </div>
+
+          <div onclick="openInfoModal('comfort')" class="flex items-center gap-space-sm group cursor-pointer p-2 rounded hover:bg-surface-container transition-colors">
+            <div class="w-10 h-10 rounded bg-surface-container-high/60 flex items-center justify-center text-primary border border-surface-container-highest group-hover:border-primary/40 transition-colors">
+              <span class="material-symbols-outlined text-[22px]">airline_seat_recline_extra</span>
+            </div>
+            <div>
+              <h4 class="font-label-md text-label-sm uppercase tracking-wider text-on-surface font-semibold group-hover:text-primary transition-colors">Zero Break-In</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Triple-Density Orthopedic Foam</p>
+            </div>
+          </div>
+
+          <div onclick="openInfoModal('shipping')" class="flex items-center gap-space-sm group cursor-pointer p-2 rounded hover:bg-surface-container transition-colors">
+            <div class="w-10 h-10 rounded bg-surface-container-high/60 flex items-center justify-center text-primary border border-surface-container-highest group-hover:border-primary/40 transition-colors">
+              <span class="material-symbols-outlined text-[22px]">local_shipping</span>
+            </div>
+            <div>
+              <h4 class="font-label-md text-label-sm uppercase tracking-wider text-on-surface font-semibold group-hover:text-primary transition-colors">White Glove Delivery</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Complimentary Across Pakistan</p>
+            </div>
+          </div>
+
+          <div onclick="openInfoModal('returns')" class="flex items-center gap-space-sm group cursor-pointer p-2 rounded hover:bg-surface-container transition-colors">
+            <div class="w-10 h-10 rounded bg-surface-container-high/60 flex items-center justify-center text-primary border border-surface-container-highest group-hover:border-primary/40 transition-colors">
+              <span class="material-symbols-outlined text-[22px]">sync_alt</span>
+            </div>
+            <div>
+              <h4 class="font-label-md text-label-sm uppercase tracking-wider text-on-surface font-semibold group-hover:text-primary transition-colors">Concierge Fitting</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">30-Day Doorstep Exchange</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED CATEGORIES: ARCHITECTURAL GALLERY (WITH PRICES MENTIONED) -->
+      <section class="w-full py-space-xl bg-background" id="categories">
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+            <div>
+              <span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-primary">Curation Portfolio</span>
+              <h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mt-1">Sculpted Categories</h2>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+              Explore purpose-built footwear disciplines, engineered with heirloom European craftsmanship and modern ergonomic support. Click any to view.
+            </p>
+          </div>
+
+          <!-- Categories Grid (6 Panels with Starting Prices) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+            <!-- 1. Men's Shoes -->
+            <div onclick="filterCategory('men'); scrollToSection('bestsellers')" class="group relative block h-[380px] rounded-lg overflow-hidden border border-surface-container-high/50 hover:border-primary/50 transition-all duration-500 bg-surface-container cursor-pointer">
+              <img alt="Men's Formal Shoes Handcrafted Oxford Goodyear Welted" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSG72x1o026KAzgM55Z_YXb9rKfUQYVAUGQH7IIV_BZA1Y7f4m4wx9zbwC3jWNjhioChjMIsfkAWksp-dhdZb_NeDRcYxnh8ndL9xE4AApWji_gEyQVwZ1rFaPCFaOXLnwNJlfDhqD4EOl_KxczS-vyUNma5kOTy-bcDX7EBPqxmm5w85QURCTCXyHbE2n0LR1LUXzOlnNs7RYTWUxgVwO8FbNizAkhBh_EK8bcbjuHlPjuANtlwTl"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+              <div class="absolute top-4 right-4">
+                <span class="px-2.5 py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase tracking-widest border border-surface-container-high">28 Silhouettes</span>
+              </div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Signature Atelier</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5 group-hover:text-primary transition-colors">Men's Handcrafted Shoes</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-1">Goodyear welted brogues, executive monk straps, and dress shoes.</p>
+                <div class="mt-2 text-sm font-bold text-primary font-mono">From Rs. 46,500</div>
+                <div class="mt-2 flex items-center gap-1 font-label-sm text-label-sm text-primary uppercase tracking-widest">
+                  <span>View Collection</span>
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Women's Shoes -->
+            <div onclick="filterCategory('women'); scrollToSection('bestsellers')" class="group relative block h-[380px] rounded-lg overflow-hidden border border-surface-container-high/50 hover:border-primary/50 transition-all duration-500 bg-surface-container cursor-pointer">
+              <img alt="Women's Sculpted Gold Slingback Stilettos on Marble" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfQ8mzhvDH9HzYAg02S8ZCxKqpFALJ63RwgwA-2WHhpsE5cuGhwbl-G00YKQDA_1CY7QgV6VdVLshaC6PL-biF6evIaRIWlYXVnoL0ebPeFTIJicE2bHeqIyzmTA-63E_vR24S5idtIyWpwmmjDpR3UwVj8RrJDv27wKPu0uVxf_nNt86iYTAfJDk2IcKskZhDzQ8lVOQeWxCHUD_rOnJH38dKZ4KXSB23V86bZoHGgx7ABmQZzUCQ"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+              <div class="absolute top-4 right-4">
+                <span class="px-2.5 py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase tracking-widest border border-surface-container-high">22 Silhouettes</span>
+              </div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Haute Silhouette</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5 group-hover:text-primary transition-colors">Women's Sculpted Shoes</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-1">Kitten heels, gilded metallic slingbacks, and evening court shoes.</p>
+                <div class="mt-2 text-sm font-bold text-primary font-mono">From Rs. 39,500</div>
+                <div class="mt-2 flex items-center gap-1 font-label-sm text-label-sm text-primary uppercase tracking-widest">
+                  <span>View Collection</span>
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Sneakers (Sneaker Fest) -->
+            <div onclick="filterCategory('sneakers'); scrollToSection('bestsellers')" class="group relative block h-[380px] rounded-lg overflow-hidden border border-surface-container-high/50 hover:border-primary/50 transition-all duration-500 bg-surface-container cursor-pointer">
+              <img alt="Luxury Italian Leather White Sneakers on Pedestal" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUHk7UlCN7JFInJGz4y5Rar8hYMQERtIR8mdm2X6nCqy-nBPMWlrO5K0QxTr6kAiLvjQn2XS1IMYcTBXJ9mm3jmpkhInggf9w8KS_tGXf_ycGwb3LT3z1NljI51AgVlVOFiqJ9-8j62EMW7wKYK12AiZplSoB9x2dq9OeptqeWGutM524Nb--A4xDMqXU95A7JfQIP5BUvIHM3tl1roApOzEZZUmGBShNM3pvQy8-TENw1-_I1EphN"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+              <div class="absolute top-4 right-4">
+                <span class="px-2.5 py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase tracking-widest border border-surface-container-high">16 Silhouettes</span>
+              </div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Urban Architectural</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5 group-hover:text-primary transition-colors">Artisanal Sneakers &amp; Fest</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-1">Monolithic cupsoles, premium calf-nappa uppers, and cushioned insoles.</p>
+                <div class="mt-2 text-sm font-bold text-primary font-mono">From Rs. 38,000</div>
+                <div class="mt-2 flex items-center gap-1 font-label-sm text-label-sm text-primary uppercase tracking-widest">
+                  <span>View Collection</span>
+                  <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Formal Oxfords -->
+            <div onclick="filterCategory('men'); scrollToSection('bestsellers')" class="group relative block h-[340px] rounded-lg overflow-hidden border border-surface-container-high/50 hover:border-primary/50 transition-all duration-500 bg-surface-container cursor-pointer">
+              <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxaMkDZdQhdheK8kXqHDrYPvHSJUh7BiLS0C2GKQKaJm_Ntf5saeHg_2DPKHpC97m1e49ze9Q6nn1jRY7C2cx8LsvTV8dH4Kd9as4PlMXCwFbBLbboELpwFXO881h4tcyfV2W6lD-2PPNjoT6I4zEd0or1E1y5NCcQLUqkLjjgmwkut5Br2d5hOancKbELnIoCUfiKy4ioPOUJJQ0SmBgwsCDBmyuweoqwrZXas7nl4aLWGo_0MWZD')"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/40 to-transparent"></div>
+              <div class="absolute top-4 right-4">
+                <span class="px-2.5 py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase tracking-widest border border-surface-container-high">Classic Lasts</span>
+              </div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Executive Protocol</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5 group-hover:text-primary transition-colors">Classic Formal Oxfords</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Closed-channel soles with micro-perforated toe medallion detailing.</p>
+                <div class="mt-2 text-sm font-bold text-primary font-mono">From Rs. 54,000</div>
+              </div>
+            </div>
+
+            <!-- 5. Casual Loafers -->
+            <div onclick="filterCategory('men'); scrollToSection('bestsellers')" class="group relative block h-[340px] rounded-lg overflow-hidden border border-surface-container-high/50 hover:border-primary/50 transition-all duration-500 bg-surface-container cursor-pointer">
+              <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiOYZM936hA2KJlCqtpXdeR3D6_-9YsCPs2nDHMiRnOFk8yzDkrXZQzxV-FsiTDM43A64cYkbhdd6LC-gKLTEItfCSEZVooGcWRO2aWGDSQ4WgISGFTbtjzZX-tIS5QCZGUEPoWMei-r0rpFgak1SEaGmIU92LX_ZCRG-08zhK0wadZrBwsHLqreXI0aHnx9FqUHZ1OtWThQUgQhRHE4QXSwgSF4zOgq7vpjkPI_kA9Bk6AyGCciyb')"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/40 to-transparent"></div>
+              <div class="absolute top-4 right-4">
+                <span class="px-2.5 py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase tracking-widest border border-surface-container-high">Riviera Ease</span>
+              </div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Effortless Sophistication</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5 group-hover:text-primary transition-colors">Casual Loafers &amp; Slip-Ons</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Unstructured glove leather and water-resistant velvet calf suede.</p>
+                <div class="mt-2 text-sm font-bold text-primary font-mono">From Rs. 46,500</div>
+              </div>
+            </div>
+
+            <!-- 6. Sports & Hybrid -->
+            <div onclick="filterCategory('sneakers'); scrollToSection('bestsellers')" class="group relative block h-[340px] rounded-lg overflow-hidden border border-surface-container-high/50 hover:border-primary/50 transition-all duration-500 bg-surface-container cursor-pointer">
+              <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApkIllLDxNemKswz4gtSECK6hGjMzMcWkrrxrDGMnJNHCPoBfSaSynflNTfvkTyjOct2XMEuy9fy_QGq6bjNlPed383wj1s4Fja2U3-clVhi-dK09FIusII72yzh5lr27ik9jYcCmB3AIfAAMhhdwSkZK23SOxwi76gvWD5D8ssvmf_le79yqSCX9cRDXgQrTzrjhBTtALb1a03PPx5emmhNNH2gPVw8NVwA0yCl0ZbSrhwlXFBPXL')"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/40 to-transparent"></div>
+              <div class="absolute top-4 right-4">
+                <span class="px-2.5 py-1 bg-surface-container-lowest/80 backdrop-blur-md rounded text-primary font-label-sm text-label-sm uppercase tracking-widest border border-surface-container-high">Innovation Lab</span>
+              </div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Dynamic Motion</span>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5 group-hover:text-primary transition-colors">Sports &amp; Hybrid Footwear</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Featherweight EVA outsoles engineered for grand tour commuting.</p>
+                <div class="mt-2 text-sm font-bold text-primary font-mono">From Rs. 38,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BEST SELLERS: FLAGSHIP CATALOGUE (WITH PROMINENT PRICES UNDER EVERY SHOE) -->
+      <section class="w-full py-space-xl bg-surface-container-lowest border-y border-surface-container-high/40" id="bestsellers">
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+          <!-- Section Title & Category Filter Tabs -->
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-space-lg gap-space-md">
+            <div>
+              <div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm uppercase tracking-[0.25em]">
+                <span class="material-symbols-outlined text-[16px]">grade</span>
+                <span>Atelier Icons</span>
+              </div>
+              <h2 id="catalogue-heading" class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mt-1">Our Most Coveted Best Sellers</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-1">Individually numbered editions with transparent pricing and doorstep white-glove trial.</p>
+            </div>
+
+            <!-- Actionable Filter Tabs -->
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1 border-b border-surface-container-high/40 md:border-b-0" id="filter-tabs-container">
+              <button onclick="filterCategory('all', this)" class="filter-tab px-4 py-2 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider rounded font-bold cursor-pointer transition-all">All Footwear</button>
+              <button onclick="filterCategory('men', this)" class="filter-tab px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider rounded transition-colors cursor-pointer">Men Formal</button>
+              <button onclick="filterCategory('women', this)" class="filter-tab px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider rounded transition-colors cursor-pointer">Women Heels</button>
+              <button onclick="filterCategory('sneakers', this)" class="filter-tab px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider rounded transition-colors cursor-pointer">Sneaker Fest</button>
+              <button onclick="filterCategory('kids', this)" class="filter-tab px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider rounded transition-colors cursor-pointer">Kids</button>
+              <button onclick="filterCategory('sale', this)" class="filter-tab px-4 py-2 bg-surface-container hover:bg-surface-container-high text-error font-label-sm text-label-sm uppercase tracking-wider rounded transition-colors cursor-pointer">Super Sale</button>
+            </div>
+          </div>
+
+          <!-- 6 PRODUCT TILES GRID (DYNAMICALLY RENDERED WITH PRICES UNDER EVERY SHOE) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="products-grid">
+            <!-- Product Cards with prices right under every shoe -->
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW ARRIVALS: EDITORIAL PRIVATE RESERVE BANNER (ORIGINAL PRESERVED) -->
+      <section class="w-full py-space-xl bg-surface-container-low relative overflow-hidden" id="new-arrivals">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+          <div class="bg-surface-container rounded-xl border border-surface-container-high/80 overflow-hidden shadow-2xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+              <!-- Editorial Copy Block -->
+              <div class="lg:col-span-7 p-space-md sm:p-space-lg lg:p-space-xl flex flex-col justify-between space-y-space-md">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-0.5 rounded bg-primary/15 border border-primary/40 text-primary font-label-sm text-label-sm uppercase tracking-widest font-semibold">
+                      New Arrival Collection
+                    </span>
+                    <span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Limited Batch 08</span>
+                  </div>
+                  <h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mt-4 uppercase leading-[1.05]">
+                    Autumn / Winter <br/>
+                    <span class="text-primary italic font-serif">Private Reserve</span>
+                  </h2>
+                  <p class="font-body-lg text-body-lg text-on-surface-variant mt-4 max-w-lg leading-relaxed">
+                    Engineered for transitional weather. Featuring ultra-lightweight carbon composite midsoles, storm-proofed Norwegian welting, and hand-patinated pebble grain hides selected from Italy’s oldest tannery in Santa Croce.
+                  </p>
+                </div>
+
+                <!-- Technical Specification Badges -->
+                <div class="grid grid-cols-3 gap-3 py-4 border-y border-surface-container-high/50">
+                  <div>
+                    <span class="font-headline-sm text-headline-sm text-primary block font-mono">1.1mm</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Supple Nappa Wall</span>
+                  </div>
+                  <div>
+                    <span class="font-headline-sm text-headline-sm text-primary block font-mono">420g</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Featherweight Last</span>
+                  </div>
+                  <div>
+                    <span class="font-headline-sm text-headline-sm text-primary block font-mono">100%</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Waterproof Welt</span>
+                  </div>
+                </div>
+
+                <!-- Action Area -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm pt-2">
+                  <button onclick="openReserveModal()" class="h-[52px] px-space-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-widest rounded font-bold hover:bg-primary-hover transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-primary/20">
+                    <span>Reserve Allocation</span>
+                    <span class="material-symbols-outlined text-[18px]">lock</span>
+                  </button>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant text-center sm:text-left">
+                    Complimentary sizing kit included with every order
+                  </span>
+                </div>
+              </div>
+
+              <!-- Editorial Imagery Feature -->
+              <div class="lg:col-span-5 relative min-h-[360px] lg:min-h-full bg-surface-container-high overflow-hidden group">
+                <img alt="Autumn Winter Private Reserve Shoe detailing sole and stitching" class="w-full h-full object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSG72x1o026KAzgM55Z_YXb9rKfUQYVAUGQH7IIV_BZA1Y7f4m4wx9zbwC3jWNjhioChjMIsfkAWksp-dhdZb_NeDRcYxnh8ndL9xE4AApWji_gEyQVwZ1rFaPCFaOXLnwNJlfDhqD4EOl_KxczS-vyUNma5kOTy-bcDX7EBPqxmm5w85QURCTCXyHbE2n0LR1LUXzOlnNs7RYTWUxgVwO8FbNizAkhBh_EK8bcbjuHlPjuANtlwTl"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent lg:hidden"></div>
+                <div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md p-3 rounded border border-surface-container-high flex items-center justify-between">
+                  <div>
+                    <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Goodyear 360 Welt</span>
+                    <p class="font-body-sm text-body-sm text-on-surface font-medium">Civitanova Archive Sole No. 4</p>
+                  </div>
+                  <button onclick="openFilmModal()" class="w-9 h-9 rounded-full bg-primary/20 hover:bg-primary text-primary hover:text-on-primary flex items-center justify-center transition-colors" title="Play Craftsman Video">
+                    <span class="material-symbols-outlined text-lg">play_arrow</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAND STORY: CRAFTED FOR EVERY STEP (ORIGINAL PRESERVED) -->
+      <section class="w-full py-space-xl bg-background border-b border-surface-container-high/40" id="brand-story">
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+            <!-- Imagery Column featuring Artisan Cobbler -->
+            <div class="lg:col-span-6 space-y-space-md">
+              <div class="relative rounded-xl overflow-hidden border border-surface-container-high/80 shadow-2xl group">
+                <img id="story-main-img" alt="Master Cobbler handcrafting leather dress shoes in atelier" class="w-full h-[480px] object-cover object-center group-hover:scale-102 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRR1IPB71ps-gH5xy2zXvpd-iBw4Fg7PVmkN2sgDsfGBUrPl-m6QUWq6bsB1Ql3yEV8RdGl7YBrDDcFHo5X-hD24yMMAXgGRlppXtBMo70YXq5xA20QELvBd0md-z9y_l7NQFZY5CfLpwF9jT-hb4EzYXfl4NdLbMWxC5SfGgoaDrjHAzAit_06I6N3erz1pXeXVnXdBHGzk5ZWwbCoYAISrTZtJ-WUNWwC4XWRoxzDq20JMFM13kj"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent"></div>
+                <!-- Play Button Overlay -->
+                <button onclick="openFilmModal()" class="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div class="w-16 h-16 rounded-full bg-primary/90 text-on-primary flex items-center justify-center shadow-2xl shadow-primary/40 backdrop-blur-md">
+                    <span class="material-symbols-outlined text-3xl">play_arrow</span>
+                  </div>
+                </button>
+                <!-- Atmospheric Badge Overlay -->
+                <div class="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                  <div class="space-y-0.5">
+                    <span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.25em]">Master Cordwainer</span>
+                    <h4 class="font-headline-sm text-headline-sm text-on-surface">SHOE VAULT Atelier Marche</h4>
+                  </div>
+                  <span class="px-3 py-1 rounded bg-surface-container-low/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm uppercase tracking-wider border border-surface-container-highest">
+                    Est. 1984
+                  </span>
+                </div>
+              </div>
+
+              <!-- Mini Gallery Highlights -->
+              <div class="grid grid-cols-3 gap-gutter-sm">
+                <div onclick="swapStoryImg(this)" class="h-24 rounded overflow-hidden border border-surface-container-high/60 hover:border-primary transition-colors bg-surface-container cursor-pointer group">
+                  <img alt="White sneaker detail" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUHk7UlCN7JFInJGz4y5Rar8hYMQERtIR8mdm2X6nCqy-nBPMWlrO5K0QxTr6kAiLvjQn2XS1IMYcTBXJ9mm3jmpkhInggf9w8KS_tGXf_ycGwb3LT3z1NljI51AgVlVOFiqJ9-8j62EMW7wKYK12AiZplSoB9x2dq9OeptqeWGutM524Nb--A4xDMqXU95A7JfQIP5BUvIHM3tl1roApOzEZZUmGBShNM3pvQy8-TENw1-_I1EphN"/>
+                </div>
+                <div onclick="swapStoryImg(this)" class="h-24 rounded overflow-hidden border border-surface-container-high/60 hover:border-primary transition-colors bg-surface-container cursor-pointer group">
+                  <img alt="Burnished calf leather detail" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSG72x1o026KAzgM55Z_YXb9rKfUQYVAUGQH7IIV_BZA1Y7f4m4wx9zbwC3jWNjhioChjMIsfkAWksp-dhdZb_NeDRcYxnh8ndL9xE4AApWji_gEyQVwZ1rFaPCFaOXLnwNJlfDhqD4EOl_KxczS-vyUNma5kOTy-bcDX7EBPqxmm5w85QURCTCXyHbE2n0LR1LUXzOlnNs7RYTWUxgVwO8FbNizAkhBh_EK8bcbjuHlPjuANtlwTl"/>
+                </div>
+                <div onclick="swapStoryImg(this)" class="h-24 rounded overflow-hidden border border-surface-container-high/60 hover:border-primary transition-colors bg-surface-container cursor-pointer group">
+                  <img alt="Metallic gold stiletto construction" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfQ8mzhvDH9HzYAg02S8ZCxKqpFALJ63RwgwA-2WHhpsE5cuGhwbl-G00YKQDA_1CY7QgV6VdVLshaC6PL-biF6evIaRIWlYXVnoL0ebPeFTIJicE2bHeqIyzmTA-63E_vR24S5idtIyWpwmmjDpR3UwVj8RrJDv27wKPu0uVxf_nNt86iYTAfJDk2IcKskZhDzQ8lVOQeWxCHUD_rOnJH38dKZ4KXSB23V86bZoHGgx7ABmQZzUCQ"/>
+                </div>
+              </div>
+            </div>
+
+            <!-- Narrative Column -->
+            <div class="lg:col-span-6 space-y-space-md">
+              <div class="space-y-space-xs">
+                <span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-primary">Heritage &amp; Devotion</span>
+                <h2 class="font-headline-xl text-headline-md md:text-headline-xl text-on-surface tracking-tight">
+                  Crafted for <br/>
+                  <span class="italic font-light text-primary">Every Step.</span>
+                </h2>
+              </div>
+              <p class="font-body-xl text-body-lg md:text-body-xl text-on-surface-variant font-light leading-relaxed">
+                At SHOE VAULT, we believe authentic luxury lives in the unseen. Behind each silhouette is an uncompromising philosophy: that exquisite aesthetic grandeur must never come at the expense of anatomical ease.
+              </p>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Every pair passes through the hands of generational Cordwainers in Civitanova Marche, Italy. Our lasts are carved to match real foot biomechanics, lined with hypoallergenic vegetable-tanned glove leather that breathes naturally throughout demanding days and celebratory evenings.
+              </p>
+
+              <!-- 3 Stat Metrics -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-xs border-y border-surface-container-high/50 py-space-md">
+                <div>
+                  <span class="font-headline-lg text-headline-lg text-primary block leading-none font-bold">120+</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface block mt-1">Hand Operations</span>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Per individual pair</p>
+                </div>
+                <div>
+                  <span class="font-headline-lg text-headline-lg text-primary block leading-none font-bold">100%</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface block mt-1">Full Grain</span>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Grade-A Italian skins</p>
+                </div>
+                <div>
+                  <span class="font-headline-lg text-headline-lg text-primary block leading-none font-bold">Life</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface block mt-1">Recraft Guarantee</span>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Restorable welted soles</p>
+                </div>
+              </div>
+
+              <!-- Atelier Signature -->
+              <div class="pt-2 flex items-center justify-between">
+                <div class="flex items-center gap-space-sm">
+                  <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary border border-surface-container-highest">
+                    <span class="material-symbols-outlined text-2xl">draw</span>
+                  </div>
+                  <div>
+                    <h5 class="font-headline-sm text-body-lg text-on-surface font-medium">Marcello V. D'Este</h5>
+                    <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Master Craftsman &amp; Co-Founder</span>
+                  </div>
+                </div>
+                <button onclick="openFilmModal()" class="font-label-sm text-label-sm text-primary tracking-widest uppercase border-b border-primary/40 hover:border-primary pb-0.5 flex items-center gap-1 cursor-pointer transition-all">
+                  <span>View Atelier Film</span>
+                  <span class="material-symbols-outlined text-sm">smart_display</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US: 4 FOUNDATIONAL PILLARS (ORIGINAL PRESERVED) -->
+      <section class="w-full py-space-xl bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+          <div class="text-center max-w-2xl mx-auto mb-space-lg space-y-space-xs">
+            <span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-primary">The SHOE VAULT Distinction</span>
+            <h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface">Built Without Compromise</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">Four standards that separate ordinary luxury footwear from our bespoke atelier creations.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+            <!-- Pillar 1 -->
+            <div onclick="openInfoModal('materials')" class="bg-surface-container p-space-md rounded-lg border border-surface-container-high/50 hover:border-primary/50 transition-all duration-300 space-y-space-sm group cursor-pointer">
+              <div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[26px]">diamond</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface">Quality Materials</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Grade-A French and Italian vegetable-tanned hides aged with organic chestnut bark extracts, developing a personalized golden patina.
+              </p>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Learn Sourcing</span>
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
+              </span>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div onclick="openInfoModal('comfort')" class="bg-surface-container p-space-md rounded-lg border border-surface-container-high/50 hover:border-primary/50 transition-all duration-300 space-y-space-sm group cursor-pointer">
+              <div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[26px]">spa</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface">Ergonomic Comfort</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Patented triple-density memory foam footbeds engineered with micro-porous latex shock absorption, eliminating fatigue across all-day wear.
+              </p>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Anatomy of Ease</span>
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
+              </span>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div onclick="openInfoModal('payment')" class="bg-surface-container p-space-md rounded-lg border border-surface-container-high/50 hover:border-primary/50 transition-all duration-300 space-y-space-sm group cursor-pointer">
+              <div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[26px]">shield</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface">Secure Global &amp; Local Pay</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                256-bit encrypted checkout supporting PayPak, Cash on Delivery (COD) in all major Pakistani cities, Visa, Mastercard, and installments.
+              </p>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Payment Safeguards</span>
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
+              </span>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div onclick="openInfoModal('returns')" class="bg-surface-container p-space-md rounded-lg border border-surface-container-high/50 hover:border-primary/50 transition-all duration-300 space-y-space-sm group cursor-pointer">
+              <div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                <span class="material-symbols-outlined text-[26px]">swap_horizontal_circle</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface">Concierge Returns</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                30-day effortless size exchange program. Our courier visits your residence or executive suite to deliver alternate sizing directly.
+              </p>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                <span>Exchange Policy</span>
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PATRON TESTIMONIALS (ORIGINAL PRESERVED) -->
+      <section class="w-full py-space-xl bg-surface-container-low border-t border-surface-container-high/40">
+        <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+            <div>
+              <span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-primary">Voices of the Patrons</span>
+              <h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mt-1">Acclaimed Distinction</h2>
+            </div>
+            <div class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider">
+              <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="text-on-surface font-bold">4.92 / 5.0</span>
+              <span class="text-on-surface-variant font-normal">Over 1,400+ Verified Collectors</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <!-- Review 1 -->
+            <div class="bg-surface-container p-space-lg rounded-lg border border-surface-container-high/60 relative flex flex-col justify-between shadow-xl">
+              <div class="space-y-space-sm">
+                <div class="flex items-center text-primary">
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-lg text-body-lg text-on-surface italic font-serif leading-relaxed">
+                  "The Milano Oxfords from SHOE VAULT rival bespoke cordwainers in Jermyn Street or Florence. The burnished espresso patina had heads turning during the Lahore Biennale gala. Zero blister period right out of the box."
+                </p>
+              </div>
+              <div class="pt-space-md mt-space-md border-t border-surface-container-high/50 flex items-center justify-between">
+                <div>
+                  <h4 class="font-headline-sm text-body-md text-on-surface font-semibold">Kamran Shah</h4>
+                  <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block">Lahore • Verified Collector</span>
+                </div>
+                <span class="material-symbols-outlined text-outline text-xl">verified_user</span>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-surface-container p-space-lg rounded-lg border border-surface-container-high/60 relative flex flex-col justify-between shadow-xl">
+              <div class="space-y-space-sm">
+                <div class="flex items-center text-primary">
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-lg text-body-lg text-on-surface italic font-serif leading-relaxed">
+                  "The Aurelia Gold slingbacks are works of art. Usually, high-heel metallurgy feels stiff, but SHOE VAULT’s triple-cushion bed allowed me to stand comfortably for four hours at our design exhibition."
+                </p>
+              </div>
+              <div class="pt-space-md mt-space-md border-t border-surface-container-high/50 flex items-center justify-between">
+                <div>
+                  <h4 class="font-headline-sm text-body-md text-on-surface font-semibold">Amina Tariq</h4>
+                  <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block">Karachi • Creative Director</span>
+                </div>
+                <span class="material-symbols-outlined text-outline text-xl">verified_user</span>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-surface-container p-space-lg rounded-lg border border-surface-container-high/60 relative flex flex-col justify-between shadow-xl">
+              <div class="space-y-space-sm">
+                <div class="flex items-center text-primary">
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                </div>
+                <p class="font-body-lg text-body-lg text-on-surface italic font-serif leading-relaxed">
+                  "Finding luxury sneakers with proper calf lining in Islamabad was impossible until SHOE VAULT arrived. White glove courier delivery was immaculate, and the travertine nappa leather has held up impeccably."
+                </p>
+              </div>
+              <div class="pt-space-md mt-space-md border-t border-surface-container-high/50 flex items-center justify-between">
+                <div>
+                  <h4 class="font-headline-sm text-body-md text-on-surface font-semibold">Daniyal Mansoor</h4>
+                  <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest block">Islamabad • Senior Partner</span>
+                </div>
+                <span class="material-symbols-outlined text-outline text-xl">verified_user</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 4. COMPLETE MULTI-COLUMN FOOTER (FROM SCREENSHOT 2 WITH SHOE VAULT BRANDING) -->
+  <footer class="w-full bg-[#0a0a0d] border-t border-surface-container-high/60 text-xs text-on-surface-variant pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+      
+      <!-- Footer Brand & Logo Header -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-8 mb-8 border-b border-surface-container-high/40">
+        <a class="flex items-center gap-4 cursor-pointer group" onclick="scrollToSection('top')" title="Back to Top">
+          <img src="logo.png" alt="SHOE VAULT Logo" class="h-14 sm:h-16 w-auto object-contain rounded border border-surface-container-high/60 group-hover:border-primary/60 transition-colors shadow-lg"/>
+          <div>
+            <span class="font-headline-sm text-xl font-bold tracking-tight text-on-surface group-hover:text-primary transition-colors">SHOE VAULT</span>
+            <p class="text-xs text-primary font-mono tracking-widest uppercase">Step In Style • Haute Atelier Footwear Pakistan</p>
+          </div>
+        </a>
+        <div class="text-center sm:text-right text-on-surface-variant text-xs">
+          <p class="font-semibold text-on-surface">Official Shoe Vault Atelier &amp; Concierge</p>
+          <p class="text-[11px] text-primary font-mono">UAN: 042-32761261 • White-Glove Doorstep Delivery</p>
+        </div>
+      </div>
+      
+      <!-- 5-Column Grid matching Screenshot 2 -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 pb-10 border-b border-surface-container-high/40">
+        
+        <!-- Column 1: SHOP -->
+        <div>
+          <h4 class="font-bold text-sm text-on-surface uppercase tracking-wider pb-2 border-b border-surface-container-high/60 mb-3">SHOP</h4>
+          <ul class="space-y-2">
+            <li><button onclick="filterCategory('new-arrivals')" class="hover:text-primary transition-colors text-left cursor-pointer">New Arrivals</button></li>
+            <li><button onclick="filterCategory('sneakers')" class="hover:text-primary transition-colors text-left cursor-pointer">Sneaker Fest</button></li>
+            <li><button onclick="filterCategory('men')" class="hover:text-primary transition-colors text-left cursor-pointer">Men</button></li>
+            <li><button onclick="filterCategory('women')" class="hover:text-primary transition-colors text-left cursor-pointer">Women</button></li>
+            <li><button onclick="filterCategory('kids')" class="hover:text-primary transition-colors text-left cursor-pointer">Kids</button></li>
+            <li><button onclick="filterCategory('bags')" class="hover:text-primary transition-colors text-left cursor-pointer">Bags</button></li>
+            <li><button onclick="filterCategory('accessories')" class="hover:text-primary transition-colors text-left cursor-pointer">Accessories</button></li>
+            <li><button onclick="filterCategory('sale')" class="hover:text-error transition-colors text-left cursor-pointer font-bold text-error">Super Sale</button></li>
+            <li><button onclick="openClubModal()" class="hover:text-primary transition-colors text-left cursor-pointer">Shoe Vault Club</button></li>
+            <li><button onclick="openOrderTrackingModal()" class="hover:text-primary transition-colors text-left cursor-pointer">Track Order</button></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: HELP CENTER & SHOE VAULT INDUSTRIAL -->
+        <div>
+          <h4 class="font-bold text-sm text-on-surface uppercase tracking-wider pb-2 border-b border-surface-container-high/60 mb-3">HELP CENTER</h4>
+          <ul class="space-y-2 mb-6">
+            <li><button onclick="openSignInModal()" class="hover:text-primary transition-colors text-left cursor-pointer">My Account</button></li>
+            <li><button onclick="openOrderTrackingModal()" class="hover:text-primary transition-colors text-left cursor-pointer">Track Order</button></li>
+            <li><a href="contact.html" class="hover:text-primary transition-colors text-left cursor-pointer font-semibold text-primary flex items-center gap-1">Contact Us (Humse Rabta Karen)</a></li>
+            <li><button onclick="openContactModal('Write To Us')" class="hover:text-primary transition-colors text-left cursor-pointer">Write To Us</button></li>
+            <li><button onclick="openContactModal('Contact info')" class="hover:text-primary transition-colors text-left cursor-pointer">Contact info</button></li>
+            <li><button onclick="openStoreLocatorModal()" class="hover:text-primary transition-colors text-left cursor-pointer font-bold text-on-surface">Store Locator</button></li>
+          </ul>
+
+          <h4 class="font-bold text-sm text-on-surface uppercase tracking-wider pb-2 border-b border-surface-container-high/60 mb-3">SHOE VAULT INDUSTRIAL</h4>
+          <ul class="space-y-2">
+            <li><button onclick="openInfoModal('industrial')" class="hover:text-primary transition-colors text-left cursor-pointer">About</button></li>
+            <li><button onclick="filterCategory('safety')" class="hover:text-primary transition-colors text-left cursor-pointer">Safety Shoes Collection</button></li>
+            <li><button onclick="filterCategory('export')" class="hover:text-primary transition-colors text-left cursor-pointer">Export Shoes Collection</button></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: FRANCHISE & COMPANY INFO -->
+        <div>
+          <h4 class="font-bold text-sm text-on-surface uppercase tracking-wider pb-2 border-b border-surface-container-high/60 mb-3">FRANCHISE</h4>
+          <ul class="space-y-2 mb-6">
+            <li><button onclick="openFranchiseModal()" class="hover:text-primary transition-colors text-left cursor-pointer">Franchise Program</button></li>
+          </ul>
+
+          <h4 class="font-bold text-sm text-on-surface uppercase tracking-wider pb-2 border-b border-surface-container-high/60 mb-3">COMPANY INFO</h4>
+          <ul class="space-y-2">
+            <li><button onclick="scrollToSection('brand-story')" class="hover:text-primary transition-colors text-left cursor-pointer">About Us</button></li>
+            <li><button onclick="openInfoModal('investors')" class="hover:text-primary transition-colors text-left cursor-pointer">Investor Relations</button></li>
+            <li><button onclick="openInfoModal('worldwide')" class="hover:text-primary transition-colors text-left cursor-pointer">Shoe Vault Worldwide</button></li>
+            <li><button onclick="openInfoModal('museum')" class="hover:text-primary transition-colors text-left cursor-pointer">Shoe Vault Museum</button></li>
+            <li><button onclick="openInfoModal('terms')" class="hover:text-primary transition-colors text-left cursor-pointer">Terms of Service</button></li>
+            <li><button onclick="openInfoModal('refund')" class="hover:text-primary transition-colors text-left cursor-pointer">Refund policy</button></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: MY ACCOUNT & POLICIES -->
+        <div>
+          <h4 class="font-bold text-sm text-on-surface uppercase tracking-wider pb-2 border-b border-surface-container-high/60 mb-3">MY ACCOUNT</h4>
+          <ul class="space-y-2 mb-4">
+            <li><button onclick="openSignInModal()" class="hover:text-primary transition-colors text-left cursor-pointer">Sign in</button></li>
+          </ul>
+          <div class="mb-6 flex items-center gap-2 cursor-pointer hover:opacity-85 transition-opacity" onclick="openClubModal()" title="Shoe Vault Club VIP Lounge">
+            <img src="logo.png" alt="Shoe Vault Club" class="h-8 w-auto object-contain rounded"/>
+            <span class="text-xs px-2.5 py-0.5 rounded-full border border-primary text-primary font-bold">Club ❤️</span>
+          </div>
+
+          <h4 class="font-bold text-sm text-on-surface uppercase tracking-wider pb-2 border-b border-surface-container-high/60 mb-3">POLICIES</h4>
+          <ul class="space-y-2">
+            <li><button onclick="openInfoModal('terms')" class="hover:text-primary transition-colors text-left cursor-pointer">Terms and Conditions</button></li>
+            <li><button onclick="openInfoModal('payment')" class="hover:text-primary transition-colors text-left cursor-pointer">Payment Options</button></li>
+            <li><button onclick="openInfoModal('faqs')" class="hover:text-primary transition-colors text-left cursor-pointer">FAQ's</button></li>
+            <li><button onclick="openInfoModal('privacy')" class="hover:text-primary transition-colors text-left cursor-pointer">Privacy Policy</button></li>
+            <li><button onclick="openInfoModal('terms')" class="hover:text-primary transition-colors text-left cursor-pointer">Terms Of Use</button></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: FOLLOW US & WE ACCEPT -->
+        <div class="col-span-2 sm:col-span-1">
+          <h4 class="font-bold text-sm text-on-surface uppercase tracking-wider pb-2 border-b border-surface-container-high/60 mb-3">FOLLOW US</h4>
+          <div class="flex items-center gap-2 mb-8">
+            <button onclick="showToast('Opening Facebook Official Page', 'Social Follow')" class="w-8 h-8 rounded bg-[#1877F2] text-white flex items-center justify-center hover:opacity-90 transition-opacity" title="Facebook">
+              <span class="font-bold text-sm">f</span>
+            </button>
+            <button onclick="showToast('Opening Instagram Official Lookbook', 'Social Follow')" class="w-8 h-8 rounded bg-gradient-to-tr from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white flex items-center justify-center hover:opacity-90 transition-opacity" title="Instagram">
+              <span class="material-symbols-outlined text-sm">photo_camera</span>
+            </button>
+            <button onclick="showToast('Opening YouTube Official Channel', 'Social Follow')" class="w-8 h-8 rounded bg-[#FF0000] text-white flex items-center justify-center hover:opacity-90 transition-opacity" title="YouTube">
+              <span class="material-symbols-outlined text-sm">play_arrow</span>
+            </button>
+            <button onclick="showToast('Opening LinkedIn Corporate Page', 'Social Follow')" class="w-8 h-8 rounded bg-[#0A66C2] text-white flex items-center justify-center hover:opacity-90 transition-opacity" title="LinkedIn">
+              <span class="font-bold text-xs">in</span>
+            </button>
+          </div>
+
+          <h4 class="font-bold text-sm text-on-surface uppercase tracking-wider pb-2 border-b border-surface-container-high/60 mb-3">WE ACCEPT</h4>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="px-2 py-1 bg-surface-container rounded border border-surface-container-high text-[11px] font-bold text-on-surface flex items-center gap-1">
+              <span class="material-symbols-outlined text-sm text-primary">local_shipping</span> COD
+            </span>
+            <span class="px-2 py-1 bg-[#1A1F71] text-white rounded text-[11px] font-bold">VISA</span>
+            <span class="px-2 py-1 bg-[#EB001B] text-white rounded text-[11px] font-bold">Mastercard</span>
+            <span class="px-2 py-1 bg-[#006FCF] text-white rounded text-[11px] font-bold">AMEX</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bottom Bar -->
+      <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        <p>© 2025 SHOE VAULT Haute Atelier Pakistan. All Rights Reserved.</p>
+        <p class="text-on-surface-variant font-mono">Shoe Vault Concierge Helpline: 042-32761261</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART BACKDROP & CART DRAWER -->
+  <div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-md z-50 transition-opacity duration-300 opacity-0 pointer-events-none" id="cart-backdrop" onclick="closeCart()"></div>
+  <aside class="fixed top-0 right-0 h-full w-full max-w-md bg-surface-container-low border-l border-surface-container-high/60 z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col shadow-2xl" id="cart-drawer">
+    <div class="p-space-md border-b border-surface-container-high/40 flex items-center justify-between">
+      <div class="flex items-center gap-space-xs">
+        <span class="font-headline-sm text-headline-sm text-on-surface">Salon Cart</span>
+        <span class="font-label-sm text-label-sm text-primary uppercase ml-2" id="cart-drawer-count">(2 Items)</span>
+      </div>
+      <button class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-colors" onclick="closeCart()" type="button">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <!-- Free Delivery Progress -->
+    <div class="bg-surface-container-high/30 p-space-md border-b border-surface-container-high/40">
+      <div class="flex items-center justify-between text-label-sm font-label-sm uppercase mb-2">
+        <span class="text-on-surface-variant">White Glove Courier</span>
+        <span class="text-primary font-bold">Rs. 149 Delivery Charge</span>
+      </div>
+      <div class="w-full h-1 bg-surface-container rounded-full overflow-hidden">
+        <div class="h-full bg-primary w-full transition-all duration-500"></div>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Doorstep White Glove delivery across all Pakistan metropolitan cities.</p>
+    </div>
+
+    <!-- Live Cart Items List -->
+    <div class="flex-1 overflow-y-auto p-space-md divide-y divide-surface-container-high/40 space-y-space-md" id="cart-items-container">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <!-- Cart Footer & Checkout Button -->
+    <div class="p-space-md bg-surface-container-lowest border-t border-surface-container-high/40">
+      <div class="space-y-space-xs mb-space-md">
+        <div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+          <span>Subtotal</span>
+          <span class="text-on-surface font-medium" id="cart-subtotal">Rs. 38,500</span>
+        </div>
+        <div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+          <span>Courier Delivery Charges</span>
+          <span class="text-primary font-bold">Rs. 149</span>
+        </div>
+        <div class="flex justify-between font-label-lg text-label-lg uppercase pt-2 border-t border-surface-container-high/40 text-on-surface">
+          <span>Total Order</span>
+          <span class="text-primary font-bold" id="cart-total">Rs. 38,649</span>
+        </div>
+      </div>
+      <button onclick="openCheckoutModal()" class="w-full block text-center py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-widest rounded-lg hover:bg-primary-hover transition-colors font-bold shadow-lg shadow-primary/10 cursor-pointer">
+        Proceed to Atelier Checkout
+      </button>
+    </div>
+  </aside>
+
+  <!-- WISHLIST DRAWER -->
+  <div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-md z-50 transition-opacity duration-300 opacity-0 pointer-events-none" id="wishlist-backdrop" onclick="closeWishlistDrawer()"></div>
+  <aside class="fixed top-0 right-0 h-full w-full max-w-md bg-surface-container-low border-l border-surface-container-high/60 z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col shadow-2xl" id="wishlist-drawer">
+    <div class="p-space-md border-b border-surface-container-high/40 flex items-center justify-between">
+      <div class="flex items-center gap-space-xs">
+        <span class="font-headline-sm text-headline-sm text-on-surface">Private Wishlist</span>
+        <span class="font-label-sm text-label-sm text-primary uppercase ml-2" id="wishlist-drawer-count">(0 Items)</span>
+      </div>
+      <button class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-colors" onclick="closeWishlistDrawer()" type="button">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-space-md divide-y divide-surface-container-high/40 space-y-space-md" id="wishlist-items-container">
+      <!-- Populated via JS -->
+    </div>
+    <div class="p-space-md bg-surface-container-lowest border-t border-surface-container-high/40">
+      <button onclick="addAllWishlistToCart()" class="w-full py-3.5 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-widest rounded font-bold hover:bg-primary-hover transition-colors">
+        Move All to Salon Cart
+      </button>
+    </div>
+  </aside>
+
+  <!-- STORE LOCATOR MODAL -->
+  <div class="fixed inset-0 bg-surface-container-lowest/85 backdrop-blur-md z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4" id="store-modal">
+    <div class="w-full max-w-2xl bg-surface-container border border-surface-container-high rounded-xl p-5 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-surface-container-high/50 pb-3">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-2xl">storefront</span>
+          <div>
+            <h3 class="font-bold text-base text-on-surface">SHOE VAULT Store Locator</h3>
+            <p class="text-xs text-on-surface-variant">Find your nearest flagship atelier outlet in Pakistan</p>
+          </div>
+        </div>
+        <button onclick="closeStoreLocatorModal()" class="text-on-surface-variant hover:text-on-surface">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <!-- City selector -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 text-xs">
+        <button onclick="filterStores('all')" class="px-3 py-1.5 rounded bg-primary text-on-primary font-bold">All Cities</button>
+        <button onclick="filterStores('Lahore')" class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary">Lahore</button>
+        <button onclick="filterStores('Karachi')" class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary">Karachi</button>
+        <button onclick="filterStores('Islamabad')" class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary">Islamabad</button>
+        <button onclick="filterStores('Faisalabad')" class="px-3 py-1.5 rounded bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary">Faisalabad</button>
+      </div>
+
+      <div class="divide-y divide-surface-container-high/50 space-y-3" id="stores-list">
+        <!-- Stores populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ORDER TRACKING MODAL -->
+  <div class="fixed inset-0 bg-surface-container-lowest/85 backdrop-blur-md z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4" id="tracking-modal">
+    <div class="w-full max-w-md bg-surface-container border border-surface-container-high rounded-xl p-5 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-surface-container-high/50 pb-3">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-2xl">local_shipping</span>
+          <h3 class="font-bold text-base text-on-surface">Track Your Shoe Order</h3>
+        </div>
+        <button onclick="closeOrderTrackingModal()" class="text-on-surface-variant hover:text-on-surface">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <p class="text-xs text-on-surface-variant">Enter your Order Number (e.g. SV-94812) or Phone Number to check live courier coordinates.</p>
+      
+      <form onsubmit="handleTrackOrder(event)" class="space-y-3">
+        <input required id="track-order-input" type="text" placeholder="e.g. SV-94812" class="w-full h-10 bg-surface-container-low border border-surface-container-high rounded px-3 text-xs text-on-surface focus:outline-none focus:border-primary"/>
+        <button type="submit" class="w-full py-2.5 bg-primary hover:bg-primary-hover text-on-primary text-xs font-bold uppercase rounded transition-colors">
+          Track Shipment
+        </button>
+      </form>
+
+      <div id="tracking-result" class="hidden p-3 bg-surface-container-low rounded border border-surface-container-high text-xs space-y-2">
+        <div class="flex justify-between font-bold">
+          <span class="text-on-surface">Status: In Transit (White Glove Courier)</span>
+          <span class="text-primary">On Schedule</span>
+        </div>
+        <p class="text-[11px] text-on-surface-variant">Your numbered edition is dispatched from Lahore Central Atelier via Express Courier. Expected Delivery: Within 48 Hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOE VAULT CLUB MODAL -->
+  <div class="fixed inset-0 bg-surface-container-lowest/85 backdrop-blur-md z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4" id="club-modal">
+    <div class="w-full max-w-md bg-surface-container border border-surface-container-high rounded-xl p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-surface-container-high/50 pb-3">
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="Shoe Vault Logo" class="h-10 w-auto object-contain rounded shadow"/>
+          <div>
+            <h3 class="font-bold text-base text-on-surface">Shoe Vault Club</h3>
+            <p class="text-[11px] text-primary font-bold">Earn points, bespoke sizing &amp; VIP allocations</p>
+          </div>
+        </div>
+        <button onclick="closeClubModal()" class="text-on-surface-variant hover:text-on-surface">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <div class="space-y-3">
+        <div>
+          <label class="block text-xs text-on-surface-variant mb-1 font-semibold">Mobile Number / Email</label>
+          <input required type="text" placeholder="0300 1234567 or patron@shoevault.com" class="w-full h-10 bg-surface-container-low border border-surface-container-high rounded px-3 text-xs text-on-surface focus:outline-none focus:border-primary"/>
+        </div>
+        <div>
+          <label class="block text-xs text-on-surface-variant mb-1 font-semibold">Password</label>
+          <input required type="password" placeholder="••••••••" class="w-full h-10 bg-surface-container-low border border-surface-container-high rounded px-3 text-xs text-on-surface focus:outline-none focus:border-primary"/>
+        </div>
+        <button onclick="handleClubLogin()" class="w-full py-2.5 bg-primary text-on-primary text-xs uppercase font-bold rounded hover:bg-primary-hover transition-colors">
+          Sign In to Shoe Vault Club
+        </button>
+        <p class="text-center text-[11px] text-on-surface-variant">
+          New to Shoe Vault? <button onclick="showToast('Welcome to Shoe Vault Club! 500 Welcome Points credited.', 'Club Member'); closeClubModal()" class="text-primary font-bold underline">Create Club Account</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT / WRITE TO US MODAL -->
+  <div class="fixed inset-0 bg-surface-container-lowest/85 backdrop-blur-md z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4" id="contact-modal">
+    <div class="w-full max-w-md bg-surface-container border border-surface-container-high rounded-xl p-5 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-surface-container-high/50 pb-3">
+        <h3 id="contact-modal-title" class="font-bold text-base text-on-surface">Write To Us</h3>
+        <button onclick="closeContactModal()" class="text-on-surface-variant hover:text-on-surface">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <form onsubmit="handleContactSubmit(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block text-on-surface-variant mb-1">Your Name *</label>
+          <input required type="text" placeholder="Ahmad Ali" class="w-full h-9 bg-surface-container-low border border-surface-container-high rounded px-3 text-on-surface focus:outline-none focus:border-primary"/>
+        </div>
+        <div>
+          <label class="block text-on-surface-variant mb-1">Phone / WhatsApp *</label>
+          <input required type="tel" placeholder="+92 300 1234567" class="w-full h-9 bg-surface-container-low border border-surface-container-high rounded px-3 text-on-surface focus:outline-none focus:border-primary"/>
+        </div>
+        <div>
+          <label class="block text-on-surface-variant mb-1">Your Inquiry / Message *</label>
+          <textarea required rows="3" placeholder="How can our bespoke atelier concierges assist you?" class="w-full bg-surface-container-low border border-surface-container-high rounded p-2 text-on-surface focus:outline-none focus:border-primary"></textarea>
+        </div>
+        <button type="submit" class="w-full py-2.5 bg-primary text-on-primary uppercase font-bold rounded hover:bg-primary-hover transition-colors">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FRANCHISE PROGRAM MODAL -->
+  <div class="fixed inset-0 bg-surface-container-lowest/85 backdrop-blur-md z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4" id="franchise-modal">
+    <div class="w-full max-w-md bg-surface-container border border-surface-container-high rounded-xl p-5 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-surface-container-high/50 pb-3">
+        <h3 class="font-bold text-base text-on-surface">SHOE VAULT Franchise Program</h3>
+        <button onclick="closeFranchiseModal()" class="text-on-surface-variant hover:text-on-surface">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <p class="text-xs text-on-surface-variant leading-relaxed">
+        Partner with Pakistan's premier haute luxury footwear atelier brand. Submit your business inquiry below:
+      </p>
+      <form onsubmit="handleFranchiseSubmit(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block text-on-surface-variant mb-1">Investor / Company Name</label>
+          <input required type="text" placeholder="Investor Name" class="w-full h-9 bg-surface-container-low border border-surface-container-high rounded px-3 text-on-surface focus:outline-none focus:border-primary"/>
+        </div>
+        <div>
+          <label class="block text-on-surface-variant mb-1">Proposed Commercial Location</label>
+          <input required type="text" placeholder="e.g. Gulberg Lahore, Clifton Karachi" class="w-full h-9 bg-surface-container-low border border-surface-container-high rounded px-3 text-on-surface focus:outline-none focus:border-primary"/>
+        </div>
+        <div>
+          <label class="block text-on-surface-variant mb-1">Contact Phone</label>
+          <input required type="tel" placeholder="+92 300 0000000" class="w-full h-9 bg-surface-container-low border border-surface-container-high rounded px-3 text-on-surface focus:outline-none focus:border-primary"/>
+        </div>
+        <button type="submit" class="w-full py-2.5 bg-primary text-on-primary uppercase font-bold rounded hover:bg-primary-hover transition-colors">
+          Submit Franchise Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- INFORMATION / POLICY MODAL -->
+  <div class="fixed inset-0 bg-surface-container-lowest/85 backdrop-blur-md z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4" id="info-modal">
+    <div class="w-full max-w-lg bg-surface-container border border-surface-container-high rounded-xl p-5 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-surface-container-high/50 pb-3">
+        <h4 id="info-title" class="font-bold text-base text-on-surface">Information</h4>
+        <button onclick="closeInfoModal()" class="text-on-surface-variant hover:text-on-surface">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <div id="info-body" class="text-xs text-on-surface-variant leading-relaxed space-y-2 max-h-72 overflow-y-auto">
+        <!-- Injected -->
+      </div>
+      <div class="text-right pt-2">
+        <button onclick="closeInfoModal()" class="px-4 py-1.5 bg-primary text-on-primary font-bold text-xs uppercase rounded">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="fixed inset-0 bg-surface-container-lowest/85 backdrop-blur-md z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4" id="checkout-modal">
+    <div class="w-full max-w-lg bg-surface-container border border-surface-container-high rounded-xl p-5 shadow-2xl space-y-4 max-h-[92vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-surface-container-high/50 pb-3">
+        <h3 class="font-bold text-base text-on-surface flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-primary text-xl">shopping_cart_checkout</span>
+          <span>SHOE VAULT Official Checkout</span>
+        </h3>
+        <button onclick="closeCheckoutModal()" class="text-on-surface-variant hover:text-on-surface">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <div id="checkout-content" class="space-y-3 text-xs">
+        <div class="p-3 bg-surface-container-low rounded border border-surface-container-high flex justify-between items-center">
+          <span class="text-on-surface-variant">Order Total Payable:</span>
+          <span class="text-base font-bold text-primary" id="checkout-total-display">Rs. 38,649</span>
+        </div>
+
+        <form onsubmit="handlePlaceOrder(event)" class="space-y-3">
+          <div>
+            <label class="block text-on-surface-variant mb-1 font-semibold">Full Name *</label>
+            <input required type="text" id="cust-name" placeholder="Kamran Shah" class="w-full h-9 bg-surface-container-low border border-surface-container-high rounded px-3 text-on-surface focus:outline-none focus:border-primary text-xs"/>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-on-surface-variant mb-1 font-semibold">Mobile Phone (For Courier SMS) *</label>
+              <input required type="tel" id="cust-phone" placeholder="0300 1234567" class="w-full h-9 bg-surface-container-low border border-surface-container-high rounded px-3 text-on-surface focus:outline-none focus:border-primary text-xs"/>
+            </div>
+            <div>
+              <label class="block text-on-surface-variant mb-1 font-semibold">City *</label>
+              <select id="cust-city" class="w-full h-9 bg-surface-container-low border border-surface-container-high rounded px-2 text-on-surface text-xs focus:outline-none focus:border-primary">
+                <option value="Lahore">Lahore</option>
+                <option value="Karachi">Karachi</option>
+                <option value="Islamabad">Islamabad</option>
+                <option value="Rawalpindi">Rawalpindi</option>
+                <option value="Faisalabad">Faisalabad</option>
+                <option value="Multan">Multan</option>
+                <option value="Peshawar">Peshawar</option>
+                <option value="Sialkot">Sialkot</option>
+                <option value="Other">Other City</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-on-surface-variant mb-1 font-semibold">Complete Street Address *</label>
+            <textarea required id="cust-address" rows="2" placeholder="Suite / Residence, Street, Area..." class="w-full bg-surface-container-low border border-surface-container-high rounded p-2 text-on-surface focus:outline-none focus:border-primary text-xs"></textarea>
+          </div>
+          <div>
+            <label class="block text-on-surface-variant mb-1 font-semibold">Payment Option</label>
+            <div class="grid grid-cols-3 gap-2">
+              <label class="flex flex-col items-center p-2 rounded border border-primary bg-primary/10 cursor-pointer text-center">
+                <input type="radio" name="payment" value="cod" checked class="hidden"/>
+                <span class="font-bold text-on-surface">Cash on Delivery</span>
+                <span class="text-[10px] text-primary">Rs. 149 Delivery</span>
+              </label>
+              <label class="flex flex-col items-center p-2 rounded border border-surface-container-high hover:border-primary/50 cursor-pointer text-center">
+                <input type="radio" name="payment" value="card" class="hidden"/>
+                <span class="font-bold text-on-surface">Debit/Credit Card</span>
+                <span class="text-[10px] text-on-surface-variant">Visa / Master</span>
+              </label>
+              <label class="flex flex-col items-center p-2 rounded border border-surface-container-high hover:border-primary/50 cursor-pointer text-center">
+                <input type="radio" name="payment" value="easy" class="hidden"/>
+                <span class="font-bold text-on-surface">PayPak / Wallet</span>
+                <span class="text-[10px] text-on-surface-variant">Direct Transfer</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="w-full py-3 bg-primary hover:bg-primary-hover text-on-primary font-bold text-xs uppercase tracking-wider rounded transition-colors shadow-lg cursor-pointer">
+            Confirm &amp; Place Order (COD)
+          </button>
+        </form>
+      </div>
+
+      <!-- Success Screen -->
+      <div id="checkout-success" class="p-6 text-center space-y-3 hidden">
+        <div class="w-12 h-12 rounded-full bg-primary/20 text-primary mx-auto flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">check_circle</span>
+        </div>
+        <h4 class="font-bold text-base text-on-surface">Order Successfully Placed!</h4>
+        <p class="text-xs text-on-surface-variant">Thank you for ordering with SHOE VAULT. Your numbered edition allocation confirmation SMS has been dispatched.</p>
+        <div class="p-2 bg-surface-container-low rounded border border-surface-container-high font-mono text-xs font-bold text-primary" id="order-id-display">
+          Order ID: SV-94812
+        </div>
+        <button onclick="closeCheckoutModal()" class="px-5 py-2 bg-primary text-on-primary text-xs uppercase font-bold rounded">
+          Continue Shopping
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ATELIER FILM MODAL -->
+  <div class="fixed inset-0 bg-surface-container-lowest/90 backdrop-blur-md z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4" id="film-modal">
+    <div class="w-full max-w-4xl bg-surface-container border border-surface-container-high rounded-xl shadow-2xl overflow-hidden relative">
+      <button onclick="closeFilmModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-surface-container-lowest/80 text-on-surface-variant hover:text-on-surface flex items-center justify-center">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="p-4 border-b border-surface-container-high/40 flex items-center justify-between">
+        <div>
+          <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Documentary Archive</span>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface">SHOE VAULT: The Civitanova Marche Cordwainers (1984–2025)</h4>
+        </div>
+      </div>
+      <div class="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRR1IPB71ps-gH5xy2zXvpd-iBw4Fg7PVmkN2sgDsfGBUrPl-m6QUWq6bsB1Ql3yEV8RdGl7YBrDDcFHo5X-hD24yMMAXgGRlppXtBMo70YXq5xA20QELvBd0md-z9y_l7NQFZY5CfLpwF9jT-hb4EzYXfl4NdLbMWxC5SfGgoaDrjHAzAit_06I6N3erz1pXeXVnXdBHGzk5ZWwbCoYAISrTZtJ-WUNWwC4XWRoxzDq20JMFM13kj" class="w-full h-full object-cover opacity-85" alt="Cobbler video film"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+        <div class="absolute text-center p-6 space-y-3">
+          <div class="w-16 h-16 rounded-full bg-primary/90 text-on-primary mx-auto flex items-center justify-center shadow-2xl animate-pulse">
+            <span class="material-symbols-outlined text-3xl">play_circle</span>
+          </div>
+          <p class="font-headline-sm text-lg text-white">4K Master Craftsman Footwear Footage</p>
+          <p class="text-xs text-on-surface-variant max-w-md mx-auto">Filmed on location in the Marche artisanal footwear valley in Civitanova, showcasing 120+ hand steps.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALLOCATION RESERVATION MODAL -->
+  <div class="fixed inset-0 bg-surface-container-lowest/85 backdrop-blur-md z-50 transition-all duration-300 opacity-0 pointer-events-none flex items-center justify-center p-4" id="reserve-modal">
+    <div class="w-full max-w-md bg-surface-container border border-surface-container-high rounded-xl p-space-md shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-surface-container-high/40 pb-3">
+        <div>
+          <span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Private Reserve 2025</span>
+          <h4 class="font-headline-sm text-headline-sm text-on-surface">Numbered Allocation</h4>
+        </div>
+        <button onclick="closeReserveModal()" class="text-on-surface-variant hover:text-on-surface">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <p class="text-sm text-on-surface-variant">
+        Reserve an individually numbered pair from Autumn/Winter Limited Batch 08 before general dispatch.
+      </p>
+      <form onsubmit="handleReserve(event)" class="space-y-3">
+        <div>
+          <label class="block font-label-sm text-label-sm uppercase text-on-surface-variant mb-1">Patron Full Name</label>
+          <input required type="text" placeholder="Your Name" class="w-full h-11 bg-surface-container-low border border-surface-container-high rounded px-3 text-sm focus:outline-none focus:border-primary"/>
+        </div>
+        <div>
+          <label class="block font-label-sm text-label-sm uppercase text-on-surface-variant mb-1">Phone / WhatsApp</label>
+          <input required type="tel" placeholder="+92 300 0000000" class="w-full h-11 bg-surface-container-low border border-surface-container-high rounded px-3 text-sm focus:outline-none focus:border-primary"/>
+        </div>
+        <div>
+          <label class="block font-label-sm text-label-sm uppercase text-on-surface-variant mb-1">Requested Size (EU)</label>
+          <select class="w-full h-11 bg-surface-container-low border border-surface-container-high rounded px-3 text-sm focus:outline-none focus:border-primary">
+            <option>40 EU / 7 UK</option>
+            <option>41 EU / 7.5 UK</option>
+            <option>42 EU / 8.5 UK (Standard Men)</option>
+            <option>43 EU / 9.5 UK</option>
+            <option>44 EU / 10.5 UK</option>
+            <option>38 EU / 5 UK (Women's)</option>
+            <option>39 EU / 6 UK (Women's)</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full py-3.5 bg-primary hover:bg-primary-hover text-on-primary font-label-md text-label-md uppercase tracking-wider font-bold rounded transition-colors">
+          Lock My Numbered Allocation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE TOAST NOTIFICATION -->
+  <div class="fixed bottom-6 right-6 z-50 bg-surface-container-high border border-primary/50 text-on-surface px-space-md py-space-sm rounded-lg shadow-2xl flex items-center gap-space-sm transform translate-y-24 opacity-0 pointer-events-none transition-all duration-300" id="atelier-toast">
+    <div class="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+      <span class="material-symbols-outlined text-lg" id="toast-icon">check_circle</span>
+    </div>
+    <div>
+      <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold block" id="toast-title">Added to Salon Selection</span>
+      <p class="font-body-sm text-body-sm text-on-surface-variant" id="toast-message">Shoe added to your order.</p>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT STATE & ENGINE -->
+  <script>
+    // 1. ALL SHOES WITH EXPLICIT PRICES MENTIONED RIGHT UNDER EVERY SHOE
+    const PRODUCTS = [
+      {
+        id: "p1",
+        title: "The Aurelia Gold Slingback",
+        category: "women",
+        categoryTag: "WOMEN'S SALON",
+        pricePKR: 42500,
+        originalPricePKR: 48000,
+        discount: "12% OFF",
+        isNew: true,
+        rating: "4.9",
+        reviews: 88,
+        badge: "Limited 75 Pairs",
+        desc: "Metallic Tuscan calfskin, sculptural 65mm heel, and padded arch support.",
+        sizes: ["37 EU", "38 EU", "39 EU", "40 EU"],
+        defaultSize: "39 EU",
+        colors: ["#D4AF37", "#1A1A1A", "#F4EFEB"],
+        colorCount: "3 Shades",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBfQ8mzhvDH9HzYAg02S8ZCxKqpFALJ63RwgwA-2WHhpsE5cuGhwbl-G00YKQDA_1CY7QgV6VdVLshaC6PL-biF6evIaRIWlYXVnoL0ebPeFTIJicE2bHeqIyzmTA-63E_vR24S5idtIyWpwmmjDpR3UwVj8RrJDv27wKPu0uVxf_nNt86iYTAfJDk2IcKskZhDzQ8lVOQeWxCHUD_rOnJH38dKZ4KXSB23V86bZoHGgx7ABmQZzUCQ"
+      },
+      {
+        id: "p2",
+        title: "The Milano Executive Oxford",
+        category: "men",
+        categoryTag: "MEN'S FORMAL",
+        pricePKR: 54000,
+        originalPricePKR: 59000,
+        discount: "8% OFF",
+        isNew: true,
+        rating: "5.0",
+        reviews: 142,
+        badge: "Goodyear Welted",
+        desc: "Burnished espresso patina calfskin with handcrafted bevelled leather waists.",
+        sizes: ["41 EU", "42 EU", "43 EU", "44 EU"],
+        defaultSize: "42 EU",
+        colors: ["#3B2219", "#4A151B", "#111113"],
+        colorCount: "3 Shades",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDSG72x1o026KAzgM55Z_YXb9rKfUQYVAUGQH7IIV_BZA1Y7f4m4wx9zbwC3jWNjhioChjMIsfkAWksp-dhdZb_NeDRcYxnh8ndL9xE4AApWji_gEyQVwZ1rFaPCFaOXLnwNJlfDhqD4EOl_KxczS-vyUNma5kOTy-bcDX7EBPqxmm5w85QURCTCXyHbE2n0LR1LUXzOlnNs7RYTWUxgVwO8FbNizAkhBh_EK8bcbjuHlPjuANtlwTl"
+      },
+      {
+        id: "p3",
+        title: "The Riviera Travertine Sneaker",
+        category: "sneakers",
+        categoryTag: "SNEAKER FEST",
+        pricePKR: 38000,
+        originalPricePKR: 44000,
+        discount: "14% OFF",
+        isNew: true,
+        rating: "4.8",
+        reviews: 210,
+        badge: "#1 Customer Choice",
+        desc: "Off-white Italian nappa with gilded eyelets and vulcanized Margom rubber sole.",
+        sizes: ["40 EU", "41 EU", "42 EU", "43 EU"],
+        defaultSize: "42 EU",
+        colors: ["#E8E1D5", "#FAF9F5"],
+        colorCount: "2 Shades",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUHk7UlCN7JFInJGz4y5Rar8hYMQERtIR8mdm2X6nCqy-nBPMWlrO5K0QxTr6kAiLvjQn2XS1IMYcTBXJ9mm3jmpkhInggf9w8KS_tGXf_ycGwb3LT3z1NljI51AgVlVOFiqJ9-8j62EMW7wKYK12AiZplSoB9x2dq9OeptqeWGutM524Nb--A4xDMqXU95A7JfQIP5BUvIHM3tl1roApOzEZZUmGBShNM3pvQy8-TENw1-_I1EphN"
+      },
+      {
+        id: "p4",
+        title: "The Verona Belgian Loafer",
+        category: "men",
+        categoryTag: "HANDMADE LOAFER",
+        pricePKR: 46500,
+        originalPricePKR: 52000,
+        discount: "10% OFF",
+        isNew: false,
+        rating: "4.9",
+        reviews: 64,
+        badge: "Bespoke Last",
+        desc: "Water-resistant reverse calf suede with hand-tied tonal bow accent.",
+        sizes: ["41 EU", "42 EU", "43 EU", "44 EU"],
+        defaultSize: "42 EU",
+        colors: ["#6B4423", "#1D3325"],
+        colorCount: "2 Shades",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDexqbj0U_VpQwCSmUmIKCNJjwtiiNfg63LTm1h3koMsp6eZmE0gWFRdE1OWRj92tbEiE5_N5yICHyrqqXW_omr0YCyCJ73QhdEMMcMxCj4gZoTsj7cbrN4KeQWSRiI17x7BAJy1cvdlS2CeNMkscF0jEcNlz3hDOJKCHoReNzPgZYbOI-YNRH2-Xyeu1AGDiL606popYn3HSAvhyu_-iD5dVQ-bf6Wwy9_gJK7rrS4SLZSOIf5dv-L"
+      },
+      {
+        id: "p5",
+        title: "The Roma Chelsea Boot",
+        category: "men",
+        categoryTag: "BOOT ATELIER",
+        pricePKR: 58000,
+        originalPricePKR: 64000,
+        discount: "9% OFF",
+        isNew: true,
+        rating: "5.0",
+        reviews: 95,
+        badge: "Storm Welted",
+        desc: "Whole-cut French box calf leather with weather-shielded storm welting.",
+        sizes: ["41 EU", "42 EU", "43 EU", "44 EU"],
+        defaultSize: "43 EU",
+        colors: ["#111113", "#8A5A36"],
+        colorCount: "2 Shades",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBM11DMgY_Zkz1hW3wKpYnjXfWUz65rBHLKIS5IG2DIRJgjm6Illjmx9x-J05FUEOytulqIjwdulYU8_NbLngZw8qdDZHTlbJEaKoSG12qIdn5PW6MIJUQLZGkZUeT2OUsxKp-Rgoxs4nDanQz2xBMdNW4GIyVuz2ZW4nmFDW3qpJJUPF-tWvg9W89yzrWqUOvn6-T-fCcG-HVueOemdKYM_uZIpkjObiV-BdED4cj8c8FZcP85XJW9"
+      },
+      {
+        id: "p6",
+        title: "The Capri Sculpted Mule",
+        category: "women",
+        categoryTag: "RESORT COUTURE",
+        pricePKR: 39500,
+        originalPricePKR: 45000,
+        discount: "12% OFF",
+        isNew: true,
+        rating: "4.8",
+        reviews: 51,
+        badge: "Hand-Carved Heel",
+        desc: "Champagne silk-calf finish with an architectural contoured wooden heel.",
+        sizes: ["36 EU", "37 EU", "38 EU", "39 EU"],
+        defaultSize: "38 EU",
+        colors: ["#D4AF37", "#E8DDD2"],
+        colorCount: "2 Shades",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCuNMwOvHMxTr6VMneaBNsBHPh_m6jiyew2r7qW1-7HEfUjCzWGr9NRpwHX6Mpk3OIjqwqXBDWecymESS1Yl0n9kkcCUjMKMCdhE8hJwYOHrsPqJ6NoPCFsa9WpKxhfK1hLiS-qb1ZHsUoyG2MgX7Nl92ZIJCwg0ithYfrch7Q6qS1jhiUD8J0np8n4L8ydvdUyqjdL-iYwRd9Sqr5adJACtDB3UxIFD5HvhcpUVRyojOiv93mK-Gjg"
+      },
+      {
+        id: "p7",
+        title: "Shoe Vault Junior Leather Runner",
+        category: "kids",
+        categoryTag: "KIDS ATELIER",
+        pricePKR: 18500,
+        originalPricePKR: 22000,
+        discount: "16% OFF",
+        isNew: true,
+        rating: "4.9",
+        reviews: 32,
+        badge: "Junior Vault",
+        desc: "Full-grain calf leather junior runner with cushioned orthopedic insole.",
+        sizes: ["30 EU", "31 EU", "32 EU", "33 EU", "34 EU"],
+        defaultSize: "32 EU",
+        colors: ["#FFFFFF", "#0A0A0A"],
+        colorCount: "2 Shades",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUHk7UlCN7JFInJGz4y5Rar8hYMQERtIR8mdm2X6nCqy-nBPMWlrO5K0QxTr6kAiLvjQn2XS1IMYcTBXJ9mm3jmpkhInggf9w8KS_tGXf_ycGwb3LT3z1NljI51AgVlVOFiqJ9-8j62EMW7wKYK12AiZplSoB9x2dq9OeptqeWGutM524Nb--A4xDMqXU95A7JfQIP5BUvIHM3tl1roApOzEZZUmGBShNM3pvQy8-TENw1-_I1EphN"
+      },
+      {
+        id: "p8",
+        title: "Executive Full-Grain Leather Briefcase",
+        category: "bags",
+        categoryTag: "LEATHER GOODS",
+        pricePKR: 34000,
+        originalPricePKR: 40000,
+        discount: "15% OFF",
+        isNew: true,
+        rating: "5.0",
+        reviews: 24,
+        badge: "Hand-Stitched",
+        desc: "Handcrafted Italian calf briefcase with solid brass hardware.",
+        sizes: ["Standard"],
+        defaultSize: "Standard",
+        colors: ["#3B2219", "#111113"],
+        colorCount: "2 Shades",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDexqbj0U_VpQwCSmUmIKCNJjwtiiNfg63LTm1h3koMsp6eZmE0gWFRdE1OWRj92tbEiE5_N5yICHyrqqXW_omr0YCyCJ73QhdEMMcMxCj4gZoTsj7cbrN4KeQWSRiI17x7BAJy1cvdlS2CeNMkscF0jEcNlz3hDOJKCHoReNzPgZYbOI-YNRH2-Xyeu1AGDiL606popYn3HSAvhyu_-iD5dVQ-bf6Wwy9_gJK7rrS4SLZSOIf5dv-L"
+      },
+      {
+        id: "p9",
+        title: "Tuscan Leather Conditioner & Carnauba Wax Kit",
+        category: "accessories",
+        categoryTag: "SHOE ACCESSORIES",
+        pricePKR: 6500,
+        originalPricePKR: 7500,
+        discount: "13% OFF",
+        isNew: false,
+        rating: "4.9",
+        reviews: 48,
+        badge: "Atelier Care",
+        desc: "Organic carnauba wax, horsehair brush and leather nourishing balm.",
+        sizes: ["Kit"],
+        defaultSize: "Kit",
+        colors: ["#D4AF37"],
+        colorCount: "1 Set",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDxaMkDZdQhdheK8kXqHDrYPvHSJUh7BiLS0C2GKQKaJm_Ntf5saeHg_2DPKHpC97m1e49ze9Q6nn1jRY7C2cx8LsvTV8dH4Kd9as4PlMXCwFbBLbboELpwFXO881h4tcyfV2W6lD-2PPNjoT6I4zEd0or1E1y5NCcQLUqkLjjgmwkut5Br2d5hOancKbELnIoCUfiKy4ioPOUJJQ0SmBgwsCDBmyuweoqwrZXas7nl4aLWGo_0MWZD"
+      },
+      {
+        id: "p10",
+        title: "Shoe Vault Steel-Toe Industrial Boot",
+        category: "safety",
+        categoryTag: "SHOE VAULT INDUSTRIAL",
+        pricePKR: 28000,
+        originalPricePKR: 35000,
+        discount: "20% OFF",
+        isNew: true,
+        rating: "5.0",
+        reviews: 19,
+        badge: "Industrial Cert",
+        desc: "Certified steel-toe cap with puncture-resistant Kevlar midsole.",
+        sizes: ["41 EU", "42 EU", "43 EU", "44 EU"],
+        defaultSize: "42 EU",
+        colors: ["#111113"],
+        colorCount: "1 Shade",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBM11DMgY_Zkz1hW3wKpYnjXfWUz65rBHLKIS5IG2DIRJgjm6Illjmx9x-J05FUEOytulqIjwdulYU8_NbLngZw8qdDZHTlbJEaKoSG12qIdn5PW6MIJUQLZGkZUeT2OUsxKp-Rgoxs4nDanQz2xBMdNW4GIyVuz2ZW4nmFDW3qpJJUPF-tWvg9W89yzrWqUOvn6-T-fCcG-HVueOemdKYM_uZIpkjObiV-BdED4cj8c8FZcP85XJW9"
+      }
+    ];
+
+    // 2. HERO SLIDES
+    const HERO_SLIDES = [
+      {
+        title: "The Monaco Runner in Fine Travertine Nappa",
+        subtitle: "Your Style.",
+        desc: "Discover footwear engineered for unprecedented comfort, quiet authority, and timeless elegance. Hand-finished Italian calfskin married with sculptural, modern architectural silhouettes.",
+        badge: "Private Reserve 2025",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUHk7UlCN7JFInJGz4y5Rar8hYMQERtIR8mdm2X6nCqy-nBPMWlrO5K0QxTr6kAiLvjQn2XS1IMYcTBXJ9mm3jmpkhInggf9w8KS_tGXf_ycGwb3LT3z1NljI51AgVlVOFiqJ9-8j62EMW7wKYK12AiZplSoB9x2dq9OeptqeWGutM524Nb--A4xDMqXU95A7JfQIP5BUvIHM3tl1roApOzEZZUmGBShNM3pvQy8-TENw1-_I1EphN"
+      },
+      {
+        title: "The Aurelia Gold Stiletto in Metallic Calfskin",
+        subtitle: "Pure Grandeur.",
+        desc: "Sculptural stiletto engineered with an anatomic triple-density cushion bed. Crafted in Florence for patrons who command the room with ease.",
+        badge: "High Jewelry Edition",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBfQ8mzhvDH9HzYAg02S8ZCxKqpFALJ63RwgwA-2WHhpsE5cuGhwbl-G00YKQDA_1CY7QgV6VdVLshaC6PL-biF6evIaRIWlYXVnoL0ebPeFTIJicE2bHeqIyzmTA-63E_vR24S5idtIyWpwmmjDpR3UwVj8RrJDv27wKPu0uVxf_nNt86iYTAfJDk2IcKskZhDzQ8lVOQeWxCHUD_rOnJH38dKZ4KXSB23V86bZoHGgx7ABmQZzUCQ"
+      },
+      {
+        title: "The Milano Executive Oxford in Espresso Patina",
+        subtitle: "Executive Authority.",
+        desc: "Goodyear welted from whole-cut Tuscan hides. Hand-burnished by second-generation artisans for the distinguished boardroom leader.",
+        badge: "Couture Cordwainer",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDSG72x1o026KAzgM55Z_YXb9rKfUQYVAUGQH7IIV_BZA1Y7f4m4wx9zbwC3jWNjhioChjMIsfkAWksp-dhdZb_NeDRcYxnh8ndL9xE4AApWji_gEyQVwZ1rFaPCFaOXLnwNJlfDhqD4EOl_KxczS-vyUNma5kOTy-bcDX7EBPqxmm5w85QURCTCXyHbE2n0LR1LUXzOlnNs7RYTWUxgVwO8FbNizAkhBh_EK8bcbjuHlPjuANtlwTl"
+      },
+      {
+        title: "The Roma Storm-Welted Chelsea Boot in Obsidian",
+        subtitle: "Timeless Resilience.",
+        desc: "Seamless whole-cut box calf with weather-shielded storm welting. Hand-fashioned in Civitanova Marche for worldwide autumn transitions.",
+        badge: "Archive Batch 08",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBM11DMgY_Zkz1hW3wKpYnjXfWUz65rBHLKIS5IG2DIRJgjm6Illjmx9x-J05FUEOytulqIjwdulYU8_NbLngZw8qdDZHTlbJEaKoSG12qIdn5PW6MIJUQLZGkZUeT2OUsxKp-Rgoxs4nDanQz2xBMdNW4GIyVuz2ZW4nmFDW3qpJJUPF-tWvg9W89yzrWqUOvn6-T-fCcG-HVueOemdKYM_uZIpkjObiV-BdED4cj8c8FZcP85XJW9"
+      }
+    ];
+
+    // 3. CURRENCY RATES
+    let currentCurrency = 'PKR';
+    const CURRENCY_RATES = {
+      PKR: { symbol: 'Rs. ', rate: 1 },
+      USD: { symbol: '$', rate: 1 / 280 },
+      AED: { symbol: 'AED ', rate: 1 / 76 }
+    };
+
+    function formatPrice(pkrValue) {
+      const cfg = CURRENCY_RATES[currentCurrency] || CURRENCY_RATES.PKR;
+      const converted = Math.round(pkrValue * cfg.rate);
+      return cfg.symbol + converted.toLocaleString();
+    }
+
+    function changeCurrency(curr) {
+      currentCurrency = curr;
+      document.getElementById('currency-select').value = curr;
+      renderProducts();
+      renderCart();
+      showToast('Currency updated to ' + curr, 'Global Salon');
+    }
+
+    // 4. THEME SWITCHER (CHAMPAGNE GOLD DEFAULT)
+    function setTheme(theme) {
+      document.body.className = document.body.className.replace(/theme-[a-z]+/g, '').trim();
+      document.body.classList.add(theme);
+      localStorage.setItem('shoevault_theme', theme);
+
+      document.querySelectorAll('.theme-chip').forEach(c => c.classList.remove('active'));
+      const activeChip = document.getElementById('chip-' + theme.replace('theme-', ''));
+      if (activeChip) activeChip.classList.add('active');
+      showToast('Palette updated to ' + theme.replace('theme-', '').toUpperCase(), 'Atelier Color Scheme');
+    }
+    const savedTheme = localStorage.getItem('shoevault_theme') || 'theme-gold';
+    setTheme(savedTheme);
+
+    // 5. HERO SLIDER
+    let currentHeroIndex = 0;
+    function switchHeroSlide(idx) {
+      currentHeroIndex = idx;
+      const slide = HERO_SLIDES[idx];
+      const img = document.getElementById('hero-main-img');
+      img.style.opacity = '0.3';
+      setTimeout(() => {
+        img.src = slide.img;
+        img.style.opacity = '1';
+      }, 200);
+
+      document.getElementById('hero-slide-title').textContent = slide.title;
+      document.getElementById('hero-subtitle').textContent = slide.subtitle;
+      document.getElementById('hero-desc').textContent = slide.desc;
+      document.getElementById('hero-badge').textContent = slide.badge;
+      document.getElementById('hero-counter').textContent = '0' + (idx + 1) + ' / 04';
+
+      for (let i = 0; i < 4; i++) {
+        const bar = document.getElementById('hero-bar-' + i);
+        if (i === idx) {
+          bar.className = 'h-2 rounded transition-all cursor-pointer w-8 bg-primary';
+        } else {
+          bar.className = 'h-2 rounded transition-all cursor-pointer w-4 bg-surface-container-high hover:bg-primary/50';
+        }
+      }
+    }
+
+    // 6. RENDER PRODUCTS WITH PROMINENT PRICES UNDER EVERY SHOE
+    let activeCategory = 'all';
+
+    function filterCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('.nav-link-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.filter-tab').forEach(b => {
+        b.className = 'filter-tab px-4 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider rounded transition-colors cursor-pointer';
+      });
+
+      if (btn) {
+        if (btn.classList.contains('nav-link-btn')) btn.classList.add('active');
+        if (btn.classList.contains('filter-tab')) {
+          btn.className = 'filter-tab px-4 py-2 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider rounded font-bold cursor-pointer transition-all';
+        }
+      }
+
+      renderProducts();
+      scrollToSection('bestsellers');
+    }
+
+    function renderProducts() {
+      const container = document.getElementById('products-grid');
+      if (!container) return;
+
+      let list = [...PRODUCTS];
+
+      if (activeCategory === 'new-arrivals') {
+        list = list.filter(p => p.isNew);
+      } else if (activeCategory === 'sale') {
+        list = list.filter(p => p.originalPricePKR > p.pricePKR);
+      } else if (activeCategory !== 'all') {
+        list = list.filter(p => p.category === activeCategory);
+      }
+
+      container.innerHTML = list.map(p => {
+        const isWishlisted = wishlist.some(w => w.id === p.id);
+        const heartIcon = isWishlisted ? 'favorite' : 'favorite_border';
+        const heartColor = isWishlisted ? 'text-primary' : 'text-on-surface-variant';
+        const heartFill = isWishlisted ? "style=\"font-variation-settings: 'FILL' 1;\"" : '';
+
+        return `
+          <div class="group bg-surface-container rounded-lg border border-surface-container-high/60 hover:border-primary/60 transition-all duration-300 flex flex-col justify-between overflow-hidden relative shadow-lg">
+            
+            <!-- Shoe Image with Wishlist & Badges -->
+            <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-surface-container-low flex items-center justify-center">
+              <img alt="${p.title}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" src="${p.img}"/>
+              
+              <!-- Badge -->
+              <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider border border-primary/30">
+                ${p.badge}
+              </span>
+
+              <!-- Wishlist Heart Button -->
+              <button onclick="toggleWishlist('${p.id}')" aria-label="Add to wishlist" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md ${heartColor} hover:text-primary flex items-center justify-center transition-colors cursor-pointer">
+                <span class="material-symbols-outlined text-[20px]" ${heartFill}>${heartIcon}</span>
+              </button>
+
+              <!-- Quick Size Hover Strip -->
+              <div class="absolute inset-x-0 bottom-0 bg-surface-container-lowest/95 backdrop-blur-md py-2.5 px-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 border-t border-surface-container-high/80 flex items-center justify-between">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Quick Fit:</span>
+                <div class="flex items-center gap-1">
+                  ${p.sizes.map(s => `
+                    <button class="w-7 h-7 rounded text-[11px] font-mono flex items-center justify-center border border-surface-container-high hover:border-primary hover:bg-primary hover:text-on-primary transition-all cursor-pointer" onclick="addToCart('${p.title}', ${p.pricePKR}, '${s}', '${p.img}')">${s.replace(' EU', '')}</button>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+
+            <!-- SHOE DETAILS WITH CLEAR, BOLD PRICE MENTIONED RIGHT UNDER SHOE TITLE -->
+            <div class="p-space-md space-y-space-xs flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between text-label-sm font-label-sm uppercase text-on-surface-variant">
+                  <span>${p.categoryTag}</span>
+                  <div class="flex items-center gap-1 text-primary">
+                    <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="text-on-surface font-semibold text-xs">${p.rating}</span>
+                    <span class="text-on-surface-variant text-[11px]">(${p.reviews})</span>
+                  </div>
+                </div>
+
+                <h3 class="font-headline-sm text-body-xl text-on-surface font-medium mt-1 hover:text-primary transition-colors">${p.title}</h3>
+                
+                <!-- PROMINENT PRICE DISPLAYED RIGHT UNDER EVERY SHOE -->
+                <div class="flex items-baseline gap-2 mt-2 py-1">
+                  <span class="font-headline-sm text-xl text-primary font-bold font-mono tracking-tight">${formatPrice(p.pricePKR)}</span>
+                  ${p.originalPricePKR ? `<span class="text-xs text-outline line-through font-mono">${formatPrice(p.originalPricePKR)}</span>` : ''}
+                  ${p.discount ? `<span class="text-[10px] uppercase font-bold text-error bg-error/15 px-1.5 py-0.5 rounded">${p.discount}</span>` : ''}
+                </div>
+
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">${p.desc}</p>
+                
+                <!-- Color Swatches with Click Interactivity -->
+                <div class="flex items-center gap-2 mt-3">
+                  ${p.colors.map((c, i) => `
+                    <button onclick="selectSwatch(this, '${p.title}')" class="w-3.5 h-3.5 rounded-full ring-1 ring-surface-container-high hover:scale-125 transition-transform cursor-pointer ${i===0 ? 'ring-offset-1 ring-offset-surface ring-primary' : ''}" style="background-color: ${c}"></button>
+                  `).join('')}
+                  <span class="text-[11px] text-on-surface-variant font-label-sm uppercase tracking-wider ml-1">${p.colorCount}</span>
+                </div>
+              </div>
+
+              <!-- Action Bar -->
+              <div class="pt-space-sm border-t border-surface-container-high/50 flex items-center justify-between mt-3">
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">White Glove Delivery</span>
+                <button class="h-10 px-4 bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface rounded font-label-sm text-label-sm uppercase tracking-wider transition-colors flex items-center gap-1.5 cursor-pointer" onclick="addToCart('${p.title}', ${p.pricePKR}, '${p.defaultSize}', '${p.img}')">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                  <span>Select</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function selectSwatch(btn, title) {
+      btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('ring-offset-1', 'ring-offset-surface', 'ring-primary'));
+      btn.classList.add('ring-offset-1', 'ring-offset-surface', 'ring-primary');
+      showToast('Selected bespoke shade for ' + title, 'Atelier Hue');
+    }
+
+    // 7. CART SYSTEM (WITH RS. 149 APPLICABLE)
+    let cart = [
+      {
+        id: "c1",
+        title: "The Sovereign Oxford",
+        pricePKR: 24000,
+        size: "42 EU",
+        color: "Obsidian Black",
+        qty: 1,
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDSG72x1o026KAzgM55Z_YXb9rKfUQYVAUGQH7IIV_BZA1Y7f4m4wx9zbwC3jWNjhioChjMIsfkAWksp-dhdZb_NeDRcYxnh8ndL9xE4AApWji_gEyQVwZ1rFaPCFaOXLnwNJlfDhqD4EOl_KxczS-vyUNma5kOTy-bcDX7EBPqxmm5w85QURCTCXyHbE2n0LR1LUXzOlnNs7RYTWUxgVwO8FbNizAkhBh_EK8bcbjuHlPjuANtlwTl"
+      },
+      {
+        id: "c2",
+        title: "Aura Sneaker Low",
+        pricePKR: 14500,
+        size: "41 EU",
+        color: "Chalk White & Gold",
+        qty: 1,
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAUHk7UlCN7JFInJGz4y5Rar8hYMQERtIR8mdm2X6nCqy-nBPMWlrO5K0QxTr6kAiLvjQn2XS1IMYcTBXJ9mm3jmpkhInggf9w8KS_tGXf_ycGwb3LT3z1NljI51AgVlVOFiqJ9-8j62EMW7wKYK12AiZplSoB9x2dq9OeptqeWGutM524Nb--A4xDMqXU95A7JfQIP5BUvIHM3tl1roApOzEZZUmGBShNM3pvQy8-TENw1-_I1EphN"
+      }
+    ];
+
+    const DELIVERY_CHARGE = 149;
+
+    function renderCart() {
+      const container = document.getElementById('cart-items-container');
+      const countBadge = document.getElementById('cart-count-badge');
+      const drawerCount = document.getElementById('cart-drawer-count');
+      const subtotalEl = document.getElementById('cart-subtotal');
+      const totalEl = document.getElementById('cart-total');
+
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const subtotalPKR = cart.reduce((sum, item) => sum + (item.pricePKR * item.qty), 0);
+      const grandTotal = subtotalPKR > 0 ? (subtotalPKR + DELIVERY_CHARGE) : 0;
+
+      countBadge.textContent = totalItems;
+      drawerCount.textContent = '(' + totalItems + ' Items)';
+      subtotalEl.textContent = formatPrice(subtotalPKR);
+      totalEl.textContent = formatPrice(grandTotal);
+
+      if (document.getElementById('checkout-total-display')) {
+        document.getElementById('checkout-total-display').textContent = formatPrice(grandTotal);
+      }
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="py-16 text-center space-y-3">
+            <span class="material-symbols-outlined text-4xl text-on-surface-variant">shopping_bag</span>
+            <p class="font-headline-sm text-body-lg text-on-surface">Your Salon Cart is Empty</p>
+            <button onclick="closeCart(); scrollToSection('bestsellers')" class="px-5 py-2.5 bg-primary text-on-primary font-label-sm text-label-sm uppercase rounded font-bold hover:bg-primary-hover">
+              Browse Best Sellers
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = cart.map((item, index) => `
+        <div class="pt-space-md flex gap-space-md items-start">
+          <div class="w-20 h-24 bg-surface-container-high rounded flex-shrink-0 border border-surface-container-high overflow-hidden">
+            <img src="${item.img}" class="w-full h-full object-cover" alt="${item.title}"/>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between items-start">
+              <h4 class="font-headline-sm text-body-lg text-on-surface font-medium">${item.title}</h4>
+              <span class="font-label-sm text-label-sm text-primary font-bold">${formatPrice(item.pricePKR * item.qty)}</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Size: ${item.size} | ${item.color || 'Signature'}</p>
+            <div class="flex items-center justify-between mt-space-sm">
+              <div class="flex items-center border border-surface-container-high rounded overflow-hidden">
+                <button onclick="updateCartQty(${index}, -1)" class="w-7 h-7 flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors cursor-pointer">-</button>
+                <span class="font-mono text-xs px-2 text-on-surface">${item.qty}</span>
+                <button onclick="updateCartQty(${index}, 1)" class="w-7 h-7 flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors cursor-pointer">+</button>
+              </div>
+              <button onclick="removeCartItem(${index})" class="font-label-sm text-label-sm text-outline hover:text-error transition-colors uppercase cursor-pointer">Remove</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function addToCart(title, pricePKR, size, img) {
+      const existing = cart.find(item => item.title === title && item.size === size);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({
+          id: 'cart_' + Date.now(),
+          title: title,
+          pricePKR: pricePKR,
+          size: size,
+          color: 'Salon Reserve',
+          qty: 1,
+          img: img
+        });
+      }
+      renderCart();
+      showToast(title + ' (' + size + ') added to cart', 'Added to Salon Selection');
+      openCart();
+    }
+
+    function updateCartQty(idx, delta) {
+      if (!cart[idx]) return;
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) cart.splice(idx, 1);
+      renderCart();
+    }
+
+    function removeCartItem(idx) {
+      cart.splice(idx, 1);
+      renderCart();
+    }
+
+    function openCart() {
+      document.getElementById('cart-drawer').classList.remove('translate-x-full');
+      document.getElementById('cart-backdrop').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeCart() {
+      document.getElementById('cart-drawer').classList.add('translate-x-full');
+      document.getElementById('cart-backdrop').classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    // 8. WISHLIST SYSTEM
+    let wishlist = [];
+
+    function toggleWishlist(prodId) {
+      const product = PRODUCTS.find(p => p.id === prodId);
+      if (!product) return;
+
+      const idx = wishlist.findIndex(w => w.id === prodId);
+      if (idx > -1) {
+        wishlist.splice(idx, 1);
+        showToast(product.title + ' removed from wishlist', 'Wishlist');
+      } else {
+        wishlist.push(product);
+        showToast(product.title + ' saved to your private wishlist', 'Saved to Wishlist');
+      }
+      updateWishlistUI();
+      renderProducts();
+    }
+
+    function updateWishlistUI() {
+      const badge = document.getElementById('wishlist-count-badge');
+      const drawerCount = document.getElementById('wishlist-drawer-count');
+      const container = document.getElementById('wishlist-items-container');
+
+      badge.style.display = wishlist.length > 0 ? 'block' : 'none';
+      drawerCount.textContent = '(' + wishlist.length + ' Items)';
+
+      if (wishlist.length === 0) {
+        container.innerHTML = '<p class="text-xs text-on-surface-variant text-center py-8">Your private wishlist is empty. Tap the heart on any footwear silhouette to save your private reserve choices.</p>';
+        return;
+      }
+
+      container.innerHTML = wishlist.map((item, index) => `
+        <div class="pt-space-md flex gap-space-md items-start">
+          <div class="w-20 h-24 bg-surface-container-high rounded flex-shrink-0 overflow-hidden border border-surface-container-high">
+            <img src="${item.img}" class="w-full h-full object-cover" alt="${item.title}"/>
+          </div>
+          <div class="flex-1">
+            <div class="flex justify-between items-start">
+              <h4 class="font-headline-sm text-body-md text-on-surface font-medium">${item.title}</h4>
+              <button onclick="toggleWishlist('${item.id}')" class="text-error hover:opacity-80">
+                <span class="material-symbols-outlined text-sm">close</span>
+              </button>
+            </div>
+            <span class="font-label-sm text-label-sm text-primary font-bold block mt-1">${formatPrice(item.pricePKR)}</span>
+            <button onclick="addToCart('${item.title}', ${item.pricePKR}, '${item.defaultSize}', '${item.img}'); toggleWishlist('${item.id}')" class="mt-2 px-3 py-1 bg-primary text-on-primary font-label-sm text-[11px] uppercase rounded font-bold hover:bg-primary-hover transition-colors">
+              Move to Cart
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function addAllWishlistToCart() {
+      if (wishlist.length === 0) return;
+      wishlist.forEach(item => addToCart(item.title, item.pricePKR, item.defaultSize, item.img));
+      wishlist = [];
+      updateWishlistUI();
+      closeWishlistDrawer();
+      openCart();
+    }
+
+    function openWishlistDrawer() {
+      document.getElementById('wishlist-drawer').classList.remove('translate-x-full');
+      document.getElementById('wishlist-backdrop').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeWishlistDrawer() {
+      document.getElementById('wishlist-drawer').classList.add('translate-x-full');
+      document.getElementById('wishlist-backdrop').classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    // 9. STORE LOCATOR
+    const STORES = [
+      { city: "Lahore", name: "SHOE VAULT Flagship Mall of Lahore", address: "Ground Floor, Mall of Lahore, Cantt", phone: "042-36622410" },
+      { city: "Lahore", name: "SHOE VAULT Packages Mall Salon", address: "Level 1, Packages Mall, Walton Road", phone: "042-38302300" },
+      { city: "Lahore", name: "SHOE VAULT DHA Y-Block Atelier", address: "142-Y, Commercial Area, DHA Phase 3", phone: "042-35741912" },
+      { city: "Karachi", name: "SHOE VAULT Dolmen Mall Clifton", address: "First Floor, Marine Drive, Clifton Block 4", phone: "021-35293910" },
+      { city: "Karachi", name: "SHOE VAULT Lucky One Salon", address: "Main Rashid Minhas Road, Federal B Area", phone: "021-36321450" },
+      { city: "Islamabad", name: "SHOE VAULT The Centaurus Mall", address: "Second Floor, Jinnah Avenue, F-8/4", phone: "051-2604810" },
+      { city: "Faisalabad", name: "SHOE VAULT D-Ground Salon", address: "Chenab Market, D-Ground, Peoples Colony", phone: "041-8546120" }
+    ];
+
+    function openStoreLocatorModal() {
+      filterStores('all');
+      document.getElementById('store-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeStoreLocatorModal() {
+      document.getElementById('store-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+    function filterStores(city) {
+      const list = city === 'all' ? STORES : STORES.filter(s => s.city === city);
+      const container = document.getElementById('stores-list');
+      container.innerHTML = list.map(s => `
+        <div class="pt-3 flex items-start justify-between gap-3 text-xs">
+          <div>
+            <h5 class="font-bold text-on-surface text-sm">${s.name}</h5>
+            <p class="text-on-surface-variant mt-0.5">${s.address}</p>
+            <span class="text-primary font-mono mt-1 block">Phone: ${s.phone}</span>
+          </div>
+          <button onclick="showToast('Directions sent to your maps app for ' + '${s.name}', 'GPS Location')" class="px-2.5 py-1 bg-surface-container-high hover:bg-primary hover:text-on-primary rounded text-xs font-semibold whitespace-nowrap">
+            Directions
+          </button>
+        </div>
+      `).join('');
+    }
+
+    // 10. ORDER TRACKING
+    function openOrderTrackingModal() {
+      document.getElementById('tracking-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeOrderTrackingModal() {
+      document.getElementById('tracking-modal').classList.add('opacity-0', 'pointer-events-none');
+      document.getElementById('tracking-result').classList.add('hidden');
+    }
+    function handleTrackOrder(e) {
+      e.preventDefault();
+      document.getElementById('tracking-result').classList.remove('hidden');
+    }
+
+    // 11. SHOE VAULT CLUB & SIGN IN
+    function openClubModal() {
+      document.getElementById('club-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeClubModal() {
+      document.getElementById('club-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+    function openSignInModal() {
+      openClubModal();
+    }
+    function handleClubLogin() {
+      showToast('Welcome back to Shoe Vault Club! Active Points: 1,450', 'Club Sign-in');
+      closeClubModal();
+    }
+
+    // 12. CONTACT & FRANCHISE MODALS
+    function openContactModal(title = 'Write To Us') {
+      document.getElementById('contact-modal-title').textContent = title;
+      document.getElementById('contact-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeContactModal() {
+      document.getElementById('contact-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+    async function handleContactSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const inputs = form.querySelectorAll('input, textarea');
+      const name = inputs[0] ? inputs[0].value.trim() : '';
+      const phone = inputs[1] ? inputs[1].value.trim() : '';
+      const msg = inputs[2] ? inputs[2].value.trim() : '';
+
+      try {
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: 'fc50ba52-f282-4da0-8487-71c4c1895c94',
+            from_name: 'Shoe Volt Website Popup',
+            subject: 'Quick Inquiry from ' + name,
+            name: name,
+            phone: phone,
+            message: msg
+          })
+        });
+      } catch (err) {}
+
+      closeContactModal();
+      showToast('Shukriya! Aapka message email (sr9245971@gmail.com) par bhej diya gaya hai.', 'Message Sent');
+      form.reset();
+    }
+
+    function openFranchiseModal() {
+      document.getElementById('franchise-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeFranchiseModal() {
+      document.getElementById('franchise-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+    function handleFranchiseSubmit(e) {
+      e.preventDefault();
+      closeFranchiseModal();
+      showToast('Franchise application received. Our business development manager will contact you within 24 hours.', 'Application Submitted');
+    }
+
+    // 13. POLICY & INFO MODALS
+    const INFO_DATA = {
+      materials: {
+        title: "Tuscan Full-Grain & Grade-A Box Calf",
+        text: "All SHOE VAULT footwear utilizes strictly Grade-A vegetable-tanned leathers sourced from ancient tanneries along the Arno River in Tuscany and Santa Croce. Naturally drum-dyed with organic chestnut wood extracts."
+      },
+      comfort: {
+        title: "Anatomy of Ease: Triple-Density Memory Bed",
+        text: "Our patented insole architecture integrates 3 distinct layers: hypoallergenic vegetable glove lining, high-rebound open-cell memory foam, and shock-absorbing micro-porous Poron to eliminate walking fatigue."
+      },
+      shipping: {
+        title: "White Glove Nationwide Delivery (Rs. 149)",
+        text: "Delivered to your doorstep in 2 to 4 business days across Karachi, Lahore, Islamabad, and nationwide metropolitan hubs. Standard courier charge of Rs. 149 applies."
+      },
+      returns: {
+        title: "30-Day Concierge Fitting & Exchange",
+        text: "If the last does not cradle your foot with effortless harmony, our courier delivers alternate sizing directly to your doorstep. Exchanges are completely complimentary."
+      },
+      industrial: {
+        title: "SHOE VAULT Industrial Safety Footwear",
+        text: "Engineered for heavy engineering, construction, and corporate operations. Features certified steel toe-caps and puncture-resistant Kevlar midsoles."
+      },
+      investors: {
+        title: "Investor Relations",
+        text: "SHOE VAULT Haute Atelier maintains transparent corporate governance, audited fiscal statements, and private investor allocations."
+      },
+      worldwide: {
+        title: "Shoe Vault Worldwide",
+        text: "Operating bespoke fitting salons in Civitanova Marche, London, Dubai, and flagship presence across major Pakistani metropolitan cities."
+      },
+      museum: {
+        title: "Shoe Vault Museum Archive",
+        text: "Curating heritage lasts, antique Goodyear welt machinery, and historically numbered shoe releases since 1984."
+      },
+      terms: {
+        title: "Terms and Conditions",
+        text: "Orders placed on our official Pakistan online store are delivered via licensed courier services. Delivery charges of Rs.149 apply to all standard orders nationwide."
+      },
+      refund: {
+        title: "15-Day Refund & Exchange Policy",
+        text: "Shoes can be exchanged or returned within 15 days of purchase at any of our official store salons or via return courier pickup."
+      },
+      payment: {
+        title: "Payment Options",
+        text: "We support Cash on Delivery (COD) anywhere in Pakistan, alongside Visa, Mastercard, American Express, and direct PayPak bank transfer."
+      },
+      faqs: {
+        title: "Frequently Asked Questions",
+        text: "<strong>Delivery time:</strong> 2 to 4 business days.<br><strong>Delivery Fee:</strong> Rs. 149 nationwide.<br><strong>Sizes:</strong> All European & UK standard dress shoe sizes available."
+      },
+      privacy: {
+        title: "Privacy Policy",
+        text: "We safeguard patron contact details and shipping addresses under strict 256-bit encryption. Your data is never shared with third parties."
+      }
+    };
+
+    function openInfoModal(key) {
+      const data = INFO_DATA[key] || { title: "Information", text: "Details available upon request from our salon concierge." };
+      document.getElementById('info-title').textContent = data.title;
+      document.getElementById('info-body').innerHTML = '<p>' + data.text + '</p>';
+      document.getElementById('info-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeInfoModal() {
+      document.getElementById('info-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    // 14. CHECKOUT LOGIC
+    function openCheckoutModal() {
+      closeCart();
+      document.getElementById('checkout-content').classList.remove('hidden');
+      document.getElementById('checkout-success').classList.add('hidden');
+      document.getElementById('checkout-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeCheckoutModal() {
+      document.getElementById('checkout-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+    function handlePlaceOrder(e) {
+      e.preventDefault();
+      const name = document.getElementById('cust-name').value;
+      const orderId = 'SV-' + Math.floor(10000 + Math.random() * 90000);
+      document.getElementById('order-id-display').textContent = 'Order ID: ' + orderId;
+      document.getElementById('checkout-content').classList.add('hidden');
+      document.getElementById('checkout-success').classList.remove('hidden');
+
+      cart = [];
+      renderCart();
+      showToast('Thank you ' + name + '! Order ' + orderId + ' placed successfully.', 'Order Confirmed');
+    }
+
+    // 15. FILM & RESERVE MODALS
+    function openFilmModal() {
+      document.getElementById('film-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeFilmModal() {
+      document.getElementById('film-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+    function openReserveModal() {
+      document.getElementById('reserve-modal').classList.remove('opacity-0', 'pointer-events-none');
+    }
+    function closeReserveModal() {
+      document.getElementById('reserve-modal').classList.add('opacity-0', 'pointer-events-none');
+    }
+    function handleReserve(e) {
+      e.preventDefault();
+      closeReserveModal();
+      showToast('Numbered Pair Allocation Confirmed for Batch 08', 'Private Allocation Reserved');
+    }
+
+    // 16. SEARCH SYSTEM
+    function handleSearch(query) {
+      const clean = query.trim().toLowerCase();
+      if (!clean) {
+        renderProducts();
+        return;
+      }
+      const matches = PRODUCTS.filter(p => 
+        p.title.toLowerCase().includes(clean) || 
+        p.category.toLowerCase().includes(clean) || 
+        p.categoryTag.toLowerCase().includes(clean) ||
+        p.desc.toLowerCase().includes(clean)
+      );
+
+      const container = document.getElementById('products-grid');
+      document.getElementById('catalogue-heading').textContent = 'Search results for: "' + query + '" (' + matches.length + ' Shoes)';
+
+      if (matches.length === 0) {
+        container.innerHTML = '<div class="col-span-full py-16 text-center text-on-surface-variant text-sm">No footwear found matching "' + query + '". Try "Oxford", "Sneaker", "Slingback", or "Loafer".</div>';
+        return;
+      }
+
+      container.innerHTML = matches.map(p => `
+        <div class="group bg-surface-container rounded-lg border border-surface-container-high/60 hover:border-primary/60 transition-all p-3 flex flex-col justify-between">
+          <div class="relative h-60 bg-surface-container-low rounded overflow-hidden">
+            <img src="${p.img}" class="w-full h-full object-cover" alt="${p.title}"/>
+            <span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-black/80 text-[10px] text-primary font-bold uppercase">${p.categoryTag}</span>
+          </div>
+          <div class="mt-3 space-y-1">
+            <h4 class="font-bold text-sm text-on-surface line-clamp-1">${p.title}</h4>
+            <div class="flex items-baseline gap-2 py-1">
+              <span class="text-base font-bold text-primary font-mono">${formatPrice(p.pricePKR)}</span>
+              ${p.originalPricePKR ? `<span class="text-xs text-outline line-through font-mono">${formatPrice(p.originalPricePKR)}</span>` : ''}
+            </div>
+            <button onclick="addToCart('${p.title}', ${p.pricePKR}, '${p.sizes[0]}', '${p.img}')" class="w-full py-2 mt-2 bg-primary text-on-primary text-xs uppercase font-bold rounded">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // 17. TOAST FEEDBACK
+    let toastTimeout;
+    function showToast(msg, title = 'Notification') {
+      const toast = document.getElementById('atelier-toast');
+      document.getElementById('toast-title').textContent = title;
+      document.getElementById('toast-message').textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }, 3500);
+    }
+
+    function scrollToSection(id) {
+      if (id === 'top') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function swapStoryImg(thumbnail) {
+      const mainImg = document.getElementById('story-main-img');
+      const clickedSrc = thumbnail.querySelector('img').src;
+      mainImg.style.opacity = '0.5';
+      setTimeout(() => {
+        mainImg.src = clickedSrc;
+        mainImg.style.opacity = '1';
+      }, 150);
+      showToast('Atelier artisan detail frame updated', 'Heritage Craft');
+    }
+
+    // INITIAL RENDER
+    renderProducts();
+    renderCart();
+    updateWishlistUI();
+  </script>
+</body>
+</html>
